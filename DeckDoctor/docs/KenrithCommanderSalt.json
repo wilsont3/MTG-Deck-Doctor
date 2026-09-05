@@ -1,0 +1,2325 @@
+{
+    "category": "cards",
+    "compressionType": "@mongodb-js/zstd",
+    "name": "Kenrith, the Returned King",
+    "color_identity":
+    [
+        "B",
+        "G",
+        "R",
+        "U",
+        "W"
+    ],
+    "id": "kenrith_the_returned_king",
+    "reserved": false,
+    "lang": "en",
+    "digital": false,
+    "games":
+    [
+        "paper"
+    ],
+    "isCommanderLegal": true,
+    "set_name": "The List",
+    "set": "plst",
+    "frontFaceId": "kenrith_the_returned_king",
+    "layout": "normal",
+    "salt": 1.092,
+    "price":
+    {
+        "usd": "3.11"
+    },
+    "faces":
+    {
+        "kenrith_the_returned_king":
+        {
+            "faceId": "kenrith_the_returned_king",
+            "layout": "normal",
+            "name": "Kenrith, the Returned King",
+            "containerId": "kenrith_the_returned_king",
+            "containerName": "Kenrith, the Returned King",
+            "parseIndividually": true,
+            "isFrontFace": true,
+            "containerTypesList":
+            [
+                "legendary",
+                "creature",
+                "human",
+                "noble"
+            ],
+            "frontFaceId": "kenrith_the_returned_king",
+            "id": "kenrith_the_returned_king",
+            "salt": 1.092,
+            "metadata":
+            {
+                "containerTypesList":
+                [
+                    "legendary",
+                    "creature",
+                    "human",
+                    "noble"
+                ],
+                "type_line": "Legendary Creature — Human Noble",
+                "power": "5",
+                "toughness": "5",
+                "keywords":
+                [
+                    "haste"
+                ],
+                "cmc": 5,
+                "oracle": "{R}: All creatures gain trample and haste until end of turn.\n{1}{G}: Put a +1/+1 counter on target creature.\n{2}{W}: Target player gains 5 life.\n{3}{U}: Target player draws a card.\n{4}{B}: Put target creature card from a graveyard onto the battlefield under its owner's control.",
+                "type": "legendary creature — human noble",
+                "typesList":
+                [
+                    "legendary",
+                    "creature",
+                    "human",
+                    "noble"
+                ],
+                "color_identity":
+                [
+                    "B",
+                    "G",
+                    "R",
+                    "U",
+                    "W"
+                ],
+                "colors":
+                [
+                    "W"
+                ],
+                "image_uris":
+                {
+                    "small": "https://cards.scryfall.io/small/front/0/e/0e259db1-14db-4314-998c-6a076a28d8cb.jpg?1783916113",
+                    "normal": "https://cards.scryfall.io/normal/front/0/e/0e259db1-14db-4314-998c-6a076a28d8cb.jpg?1783916113",
+                    "large": "https://cards.scryfall.io/large/front/0/e/0e259db1-14db-4314-998c-6a076a28d8cb.jpg?1783916113",
+                    "png": "https://cards.scryfall.io/png/front/0/e/0e259db1-14db-4314-998c-6a076a28d8cb.png?1783916113",
+                    "art_crop": "https://cards.scryfall.io/art_crop/front/0/e/0e259db1-14db-4314-998c-6a076a28d8cb.jpg?1783916113",
+                    "border_crop": "https://cards.scryfall.io/border_crop/front/0/e/0e259db1-14db-4314-998c-6a076a28d8cb.jpg?1783916113"
+                },
+                "mana_cost": "{4}{W}",
+                "reserved": false,
+                "lang": "en",
+                "digital": false,
+                "games":
+                [
+                    "paper"
+                ],
+                "artist": "Kieran Yanner",
+                "loyalty": null
+            },
+            "castData":
+            {
+                "bias": 0.22313016014843,
+                "castabilityBiasGenericCostDeduction": 0.32188758248682,
+                "castability":
+                {
+                    "cmc": 5,
+                    "snow": 0,
+                    "x": 0,
+                    "totalForNonX": 5,
+                    "symbols":
+                    {
+                        "w":
+                        {
+                            "count": 1
+                        }
+                    },
+                    "coloredPipCount": 1,
+                    "generic": 4,
+                    "phyrexian": 0,
+                    "hybrid": 0,
+                    "hasFreeCast": false,
+                    "hasFreeCastWithCaveat": false,
+                    "hasReductionEffect": false,
+                    "hasSpeedBonus": false,
+                    "costReductionContextIds": null,
+                    "hasRepeatableActivation": false,
+                    "additionalCosts":
+                    {
+                        "loyaltyCost": null,
+                        "isSuspend": false,
+                        "suspendCost":
+                        {},
+                        "suspendLength": 0,
+                        "sacrificeSelf": false,
+                        "payLife": false,
+                        "discardCard": false,
+                        "exileCard": false,
+                        "sacrificePermanent": false,
+                        "tapSelf": false,
+                        "qualifiers": 0,
+                        "isDiceRoll": false,
+                        "discardSelf": false,
+                        "exileSelf": false,
+                        "freeWithCaveat":
+                        {
+                            "qualifiers": 0
+                        }
+                    },
+                    "score": 0,
+                    "baselineScore": 0
+                }
+            },
+            "context":
+            {
+                "raw": "{R}: All creatures gain trample and haste until end of turn.\n{1}{G}: Put a +1/+1 counter on target creature.\n{2}{W}: Target player gains 5 life.\n{3}{U}: Target player draws a card.\n{4}{B}: Put target creature card from a graveyard onto the battlefield under its owner's control.",
+                "keywords":
+                [
+                    "haste"
+                ],
+                "names":
+                [
+                    "Kenrith, the Returned King"
+                ],
+                "parsedNames":
+                [],
+                "lines":
+                [
+                    {
+                        "raw": "{R}: All creatures gain trample and haste until end of turn.",
+                        "parts":
+                        [
+                            {
+                                "raw": "{r}: all creatures gain trample and haste until end of turn.",
+                                "parsed": "{R}: All creatures gain trample and haste until end of turn.",
+                                "id": "a174",
+                                "conditions":
+                                [
+                                    {
+                                        "text": "{r}:",
+                                        "canTriggerMultipleTimesPerTurn": true,
+                                        "isCompoundTrigger": false,
+                                        "duringOtherPlayersStep": null,
+                                        "isOptionalPlayerChoice": false,
+                                        "actionScope": "self",
+                                        "gameStateModifier": null,
+                                        "card":
+                                        {
+                                            "this":
+                                            {
+                                                "isOrStatement": false,
+                                                "actions":
+                                                []
+                                            },
+                                            "dependencies":
+                                            {
+                                                "isOrStatement": false,
+                                                "actions":
+                                                []
+                                            }
+                                        },
+                                        "manaProduced":
+                                        {
+                                            "colors":
+                                            [],
+                                            "quantity": 0
+                                        },
+                                        "extra":
+                                        {
+                                            "line":
+                                            {},
+                                            "part":
+                                            {},
+                                            "this":
+                                            {}
+                                        },
+                                        "id": "9d30",
+                                        "rawText": "{r}:",
+                                        "qualifiers":
+                                        {},
+                                        "isSelfReference": false,
+                                        "isSelfAndOtherCardsReference": false,
+                                        "isSelfAndOtherPlayerReference": false,
+                                        "isInputCondition": false,
+                                        "isSingleActivationOnly": false,
+                                        "isSingleTriggerOnly": false,
+                                        "isEnterOrLeaveEffect": false,
+                                        "player":
+                                        {
+                                            "this":
+                                            {
+                                                "type": "self",
+                                                "isOrStatement": false,
+                                                "actions":
+                                                [
+                                                    "activate"
+                                                ]
+                                            },
+                                            "dependencies":
+                                            {
+                                                "type": "",
+                                                "isOrStatement": false,
+                                                "actions":
+                                                []
+                                            }
+                                        },
+                                        "zones":
+                                        {
+                                            "from":
+                                            [
+                                                "anywhere"
+                                            ],
+                                            "to":
+                                            [
+                                                "anywhere"
+                                            ]
+                                        },
+                                        "results":
+                                        [
+                                            {
+                                                "text": "all creatures gain trample and haste until end of turn.",
+                                                "canTriggerMultipleTimesPerTurn": true,
+                                                "isCompoundTrigger": false,
+                                                "duringOtherPlayersStep": null,
+                                                "isOptionalPlayerChoice": false,
+                                                "actionScope": "all",
+                                                "gameStateModifier":
+                                                {
+                                                    "effect": "keyword_grant",
+                                                    "applies": "all",
+                                                    "keywords":
+                                                    [
+                                                        "trample",
+                                                        "haste"
+                                                    ],
+                                                    "excludesSelf": false
+                                                },
+                                                "card":
+                                                {
+                                                    "this":
+                                                    {
+                                                        "isOrStatement": false,
+                                                        "actions":
+                                                        []
+                                                    },
+                                                    "dependencies":
+                                                    {
+                                                        "isOrStatement": false,
+                                                        "actions":
+                                                        []
+                                                    }
+                                                },
+                                                "manaProduced":
+                                                {
+                                                    "colors":
+                                                    [],
+                                                    "quantity": 0
+                                                },
+                                                "extra":
+                                                {
+                                                    "line":
+                                                    {},
+                                                    "part":
+                                                    {},
+                                                    "this":
+                                                    {
+                                                        "hasAllGain": true
+                                                    }
+                                                },
+                                                "id": "dd9b",
+                                                "rawText": "all creatures gain trample and haste until end of turn.",
+                                                "qualifiers":
+                                                {
+                                                    "type":
+                                                    {
+                                                        "list":
+                                                        [
+                                                            "creature"
+                                                        ],
+                                                        "allowOr": false
+                                                    }
+                                                },
+                                                "isSelfReference": false,
+                                                "isSelfAndOtherCardsReference": false,
+                                                "isSelfAndOtherPlayerReference": false,
+                                                "isInputCondition": false,
+                                                "isSingleActivationOnly": false,
+                                                "isSingleTriggerOnly": false,
+                                                "isEnterOrLeaveEffect": false,
+                                                "player":
+                                                {
+                                                    "this":
+                                                    {
+                                                        "type": "self",
+                                                        "isOrStatement": false,
+                                                        "actions":
+                                                        []
+                                                    },
+                                                    "dependencies":
+                                                    {
+                                                        "type": "",
+                                                        "isOrStatement": false,
+                                                        "actions":
+                                                        []
+                                                    }
+                                                },
+                                                "zones":
+                                                {
+                                                    "from":
+                                                    [
+                                                        "anywhere"
+                                                    ],
+                                                    "to":
+                                                    [
+                                                        "anywhere"
+                                                    ]
+                                                },
+                                                "conditionType": "result",
+                                                "scoreBias": 0.17
+                                            }
+                                        ],
+                                        "conditionType": "condition",
+                                        "scoreBias": 0.17
+                                    }
+                                ]
+                            }
+                        ],
+                        "id": "f83d",
+                        "effectType": "ability",
+                        "hasSelfReference": false
+                    },
+                    {
+                        "raw": "{1}{G}: Put a +1/+1 counter on target creature.",
+                        "parts":
+                        [
+                            {
+                                "raw": "{1}{g}: put a +1/+1 counter on target creature.",
+                                "parsed": "{1}{G}: Put a +1/+1 counter on target creature.",
+                                "id": "95f7",
+                                "conditions":
+                                [
+                                    {
+                                        "text": "{1}{g}:",
+                                        "canTriggerMultipleTimesPerTurn": true,
+                                        "isCompoundTrigger": false,
+                                        "duringOtherPlayersStep": null,
+                                        "isOptionalPlayerChoice": false,
+                                        "actionScope": "self",
+                                        "gameStateModifier": null,
+                                        "card":
+                                        {
+                                            "this":
+                                            {
+                                                "isOrStatement": false,
+                                                "actions":
+                                                []
+                                            },
+                                            "dependencies":
+                                            {
+                                                "isOrStatement": false,
+                                                "actions":
+                                                []
+                                            }
+                                        },
+                                        "manaProduced":
+                                        {
+                                            "colors":
+                                            [],
+                                            "quantity": 0
+                                        },
+                                        "extra":
+                                        {
+                                            "line":
+                                            {},
+                                            "part":
+                                            {},
+                                            "this":
+                                            {}
+                                        },
+                                        "id": "2284",
+                                        "rawText": "{1}{g}:",
+                                        "qualifiers":
+                                        {},
+                                        "isSelfReference": false,
+                                        "isSelfAndOtherCardsReference": false,
+                                        "isSelfAndOtherPlayerReference": false,
+                                        "isInputCondition": false,
+                                        "isSingleActivationOnly": false,
+                                        "isSingleTriggerOnly": false,
+                                        "isEnterOrLeaveEffect": false,
+                                        "player":
+                                        {
+                                            "this":
+                                            {
+                                                "type": "self",
+                                                "isOrStatement": false,
+                                                "actions":
+                                                [
+                                                    "activate"
+                                                ]
+                                            },
+                                            "dependencies":
+                                            {
+                                                "type": "",
+                                                "isOrStatement": false,
+                                                "actions":
+                                                []
+                                            }
+                                        },
+                                        "zones":
+                                        {
+                                            "from":
+                                            [
+                                                "anywhere"
+                                            ],
+                                            "to":
+                                            [
+                                                "anywhere"
+                                            ]
+                                        },
+                                        "results":
+                                        [
+                                            {
+                                                "text": "put a +1/+1 counter on target creature.",
+                                                "canTriggerMultipleTimesPerTurn": true,
+                                                "isCompoundTrigger": false,
+                                                "duringOtherPlayersStep": null,
+                                                "isOptionalPlayerChoice": false,
+                                                "actionScope": "single",
+                                                "gameStateModifier": null,
+                                                "card":
+                                                {
+                                                    "this":
+                                                    {
+                                                        "isOrStatement": false,
+                                                        "actions":
+                                                        [
+                                                            "commit_a_crime"
+                                                        ]
+                                                    },
+                                                    "dependencies":
+                                                    {
+                                                        "isOrStatement": false,
+                                                        "actions":
+                                                        []
+                                                    }
+                                                },
+                                                "manaProduced":
+                                                {
+                                                    "colors":
+                                                    [],
+                                                    "quantity": 0
+                                                },
+                                                "extra":
+                                                {
+                                                    "line":
+                                                    {},
+                                                    "part":
+                                                    {},
+                                                    "this":
+                                                    {
+                                                        "hasPutCounterOnTarget": true
+                                                    }
+                                                },
+                                                "id": "0ca1",
+                                                "rawText": "put a +1/+1 counter on target creature.",
+                                                "qualifiers":
+                                                {
+                                                    "counter_type":
+                                                    {
+                                                        "list":
+                                                        [
+                                                            "+1/+1"
+                                                        ]
+                                                    },
+                                                    "quantity":
+                                                    {
+                                                        "list":
+                                                        [
+                                                            1
+                                                        ]
+                                                    },
+                                                    "type":
+                                                    {
+                                                        "list":
+                                                        [
+                                                            "creature"
+                                                        ],
+                                                        "allowOr": false
+                                                    }
+                                                },
+                                                "isSelfReference": false,
+                                                "isSelfAndOtherCardsReference": false,
+                                                "isSelfAndOtherPlayerReference": false,
+                                                "isInputCondition": false,
+                                                "isSingleActivationOnly": false,
+                                                "isSingleTriggerOnly": false,
+                                                "isEnterOrLeaveEffect": false,
+                                                "player":
+                                                {
+                                                    "this":
+                                                    {
+                                                        "type": "all",
+                                                        "isOrStatement": false,
+                                                        "actions":
+                                                        [
+                                                            "add_counter"
+                                                        ]
+                                                    },
+                                                    "dependencies":
+                                                    {
+                                                        "type": "",
+                                                        "isOrStatement": false,
+                                                        "actions":
+                                                        []
+                                                    }
+                                                },
+                                                "zones":
+                                                {
+                                                    "from":
+                                                    [
+                                                        "battlefield"
+                                                    ],
+                                                    "to":
+                                                    [
+                                                        "anywhere"
+                                                    ]
+                                                },
+                                                "conditionType": "result",
+                                                "scoreBias": 0.11
+                                            }
+                                        ],
+                                        "conditionType": "condition",
+                                        "scoreBias": 0.12
+                                    }
+                                ]
+                            }
+                        ],
+                        "id": "fd87",
+                        "effectType": "ability",
+                        "hasSelfReference": false
+                    },
+                    {
+                        "raw": "{2}{W}: Target player gains 5 life.",
+                        "parts":
+                        [
+                            {
+                                "raw": "{2}{w}: target player gains 5 life.",
+                                "parsed": "{2}{W}: Target player gains 5 life.",
+                                "id": "22cc",
+                                "conditions":
+                                [
+                                    {
+                                        "text": "{2}{w}:",
+                                        "canTriggerMultipleTimesPerTurn": true,
+                                        "isCompoundTrigger": false,
+                                        "duringOtherPlayersStep": null,
+                                        "isOptionalPlayerChoice": false,
+                                        "actionScope": "self",
+                                        "gameStateModifier": null,
+                                        "card":
+                                        {
+                                            "this":
+                                            {
+                                                "isOrStatement": false,
+                                                "actions":
+                                                []
+                                            },
+                                            "dependencies":
+                                            {
+                                                "isOrStatement": false,
+                                                "actions":
+                                                []
+                                            }
+                                        },
+                                        "manaProduced":
+                                        {
+                                            "colors":
+                                            [],
+                                            "quantity": 0
+                                        },
+                                        "extra":
+                                        {
+                                            "line":
+                                            {},
+                                            "part":
+                                            {},
+                                            "this":
+                                            {}
+                                        },
+                                        "id": "3073",
+                                        "rawText": "{2}{w}:",
+                                        "qualifiers":
+                                        {},
+                                        "isSelfReference": false,
+                                        "isSelfAndOtherCardsReference": false,
+                                        "isSelfAndOtherPlayerReference": false,
+                                        "isInputCondition": false,
+                                        "isSingleActivationOnly": false,
+                                        "isSingleTriggerOnly": false,
+                                        "isEnterOrLeaveEffect": false,
+                                        "player":
+                                        {
+                                            "this":
+                                            {
+                                                "type": "self",
+                                                "isOrStatement": false,
+                                                "actions":
+                                                [
+                                                    "activate"
+                                                ]
+                                            },
+                                            "dependencies":
+                                            {
+                                                "type": "",
+                                                "isOrStatement": false,
+                                                "actions":
+                                                []
+                                            }
+                                        },
+                                        "zones":
+                                        {
+                                            "from":
+                                            [
+                                                "anywhere"
+                                            ],
+                                            "to":
+                                            [
+                                                "anywhere"
+                                            ]
+                                        },
+                                        "results":
+                                        [
+                                            {
+                                                "text": "target player gains 5 life.",
+                                                "canTriggerMultipleTimesPerTurn": true,
+                                                "isCompoundTrigger": false,
+                                                "duringOtherPlayersStep": null,
+                                                "isOptionalPlayerChoice": false,
+                                                "actionScope": "single",
+                                                "gameStateModifier": null,
+                                                "card":
+                                                {
+                                                    "this":
+                                                    {
+                                                        "isOrStatement": false,
+                                                        "actions":
+                                                        [
+                                                            "commit_a_crime"
+                                                        ]
+                                                    },
+                                                    "dependencies":
+                                                    {
+                                                        "isOrStatement": false,
+                                                        "actions":
+                                                        []
+                                                    }
+                                                },
+                                                "manaProduced":
+                                                {
+                                                    "colors":
+                                                    [],
+                                                    "quantity": 0
+                                                },
+                                                "extra":
+                                                {
+                                                    "line":
+                                                    {},
+                                                    "part":
+                                                    {},
+                                                    "this":
+                                                    {
+                                                        "checksGainsOrLosesLifeNonOpponent": true
+                                                    }
+                                                },
+                                                "id": "4296",
+                                                "rawText": "target player gains 5 life.",
+                                                "qualifiers":
+                                                {
+                                                    "quantity":
+                                                    {
+                                                        "list":
+                                                        [
+                                                            5
+                                                        ]
+                                                    }
+                                                },
+                                                "isSelfReference": false,
+                                                "isSelfAndOtherCardsReference": false,
+                                                "isSelfAndOtherPlayerReference": false,
+                                                "isInputCondition": false,
+                                                "isSingleActivationOnly": false,
+                                                "isSingleTriggerOnly": false,
+                                                "isEnterOrLeaveEffect": false,
+                                                "player":
+                                                {
+                                                    "this":
+                                                    {
+                                                        "type": "all",
+                                                        "isOrStatement": false,
+                                                        "actions":
+                                                        [
+                                                            "gain_life"
+                                                        ]
+                                                    },
+                                                    "dependencies":
+                                                    {
+                                                        "type": "",
+                                                        "isOrStatement": false,
+                                                        "actions":
+                                                        []
+                                                    }
+                                                },
+                                                "zones":
+                                                {
+                                                    "from":
+                                                    [
+                                                        "anywhere"
+                                                    ],
+                                                    "to":
+                                                    [
+                                                        "anywhere"
+                                                    ]
+                                                },
+                                                "conditionType": "result",
+                                                "scoreBias": 0.08
+                                            }
+                                        ],
+                                        "conditionType": "condition",
+                                        "scoreBias": 0.09
+                                    }
+                                ]
+                            }
+                        ],
+                        "id": "0517",
+                        "effectType": "ability",
+                        "hasSelfReference": false
+                    },
+                    {
+                        "raw": "{3}{U}: Target player draws a card.",
+                        "parts":
+                        [
+                            {
+                                "raw": "{3}{u}: target player draws a card.",
+                                "parsed": "{3}{U}: Target player draws a card.",
+                                "id": "9cee",
+                                "conditions":
+                                [
+                                    {
+                                        "text": "{3}{u}:",
+                                        "canTriggerMultipleTimesPerTurn": true,
+                                        "isCompoundTrigger": false,
+                                        "duringOtherPlayersStep": null,
+                                        "isOptionalPlayerChoice": false,
+                                        "actionScope": "self",
+                                        "gameStateModifier": null,
+                                        "card":
+                                        {
+                                            "this":
+                                            {
+                                                "isOrStatement": false,
+                                                "actions":
+                                                []
+                                            },
+                                            "dependencies":
+                                            {
+                                                "isOrStatement": false,
+                                                "actions":
+                                                []
+                                            }
+                                        },
+                                        "manaProduced":
+                                        {
+                                            "colors":
+                                            [],
+                                            "quantity": 0
+                                        },
+                                        "extra":
+                                        {
+                                            "line":
+                                            {},
+                                            "part":
+                                            {},
+                                            "this":
+                                            {}
+                                        },
+                                        "id": "9b67",
+                                        "rawText": "{3}{u}:",
+                                        "qualifiers":
+                                        {},
+                                        "isSelfReference": false,
+                                        "isSelfAndOtherCardsReference": false,
+                                        "isSelfAndOtherPlayerReference": false,
+                                        "isInputCondition": false,
+                                        "isSingleActivationOnly": false,
+                                        "isSingleTriggerOnly": false,
+                                        "isEnterOrLeaveEffect": false,
+                                        "player":
+                                        {
+                                            "this":
+                                            {
+                                                "type": "self",
+                                                "isOrStatement": false,
+                                                "actions":
+                                                [
+                                                    "activate"
+                                                ]
+                                            },
+                                            "dependencies":
+                                            {
+                                                "type": "",
+                                                "isOrStatement": false,
+                                                "actions":
+                                                []
+                                            }
+                                        },
+                                        "zones":
+                                        {
+                                            "from":
+                                            [
+                                                "anywhere"
+                                            ],
+                                            "to":
+                                            [
+                                                "anywhere"
+                                            ]
+                                        },
+                                        "results":
+                                        [
+                                            {
+                                                "text": "target player draws a card.",
+                                                "canTriggerMultipleTimesPerTurn": true,
+                                                "isCompoundTrigger": false,
+                                                "duringOtherPlayersStep": null,
+                                                "isOptionalPlayerChoice": false,
+                                                "actionScope": "single",
+                                                "gameStateModifier": null,
+                                                "card":
+                                                {
+                                                    "this":
+                                                    {
+                                                        "isOrStatement": false,
+                                                        "actions":
+                                                        [
+                                                            "commit_a_crime"
+                                                        ]
+                                                    },
+                                                    "dependencies":
+                                                    {
+                                                        "isOrStatement": false,
+                                                        "actions":
+                                                        []
+                                                    }
+                                                },
+                                                "manaProduced":
+                                                {
+                                                    "colors":
+                                                    [],
+                                                    "quantity": 0
+                                                },
+                                                "extra":
+                                                {
+                                                    "line":
+                                                    {},
+                                                    "part":
+                                                    {},
+                                                    "this":
+                                                    {}
+                                                },
+                                                "id": "3038",
+                                                "rawText": "target player draws a card.",
+                                                "qualifiers":
+                                                {
+                                                    "quantity":
+                                                    {
+                                                        "list":
+                                                        [
+                                                            1
+                                                        ]
+                                                    }
+                                                },
+                                                "isSelfReference": false,
+                                                "isSelfAndOtherCardsReference": false,
+                                                "isSelfAndOtherPlayerReference": false,
+                                                "isInputCondition": false,
+                                                "isSingleActivationOnly": false,
+                                                "isSingleTriggerOnly": false,
+                                                "isEnterOrLeaveEffect": false,
+                                                "player":
+                                                {
+                                                    "this":
+                                                    {
+                                                        "type": "all",
+                                                        "isOrStatement": false,
+                                                        "actions":
+                                                        [
+                                                            "draw"
+                                                        ]
+                                                    },
+                                                    "dependencies":
+                                                    {
+                                                        "type": "",
+                                                        "isOrStatement": false,
+                                                        "actions":
+                                                        []
+                                                    }
+                                                },
+                                                "zones":
+                                                {
+                                                    "from":
+                                                    [
+                                                        "library"
+                                                    ],
+                                                    "to":
+                                                    [
+                                                        "hand"
+                                                    ]
+                                                },
+                                                "conditionType": "result",
+                                                "scoreBias": 0.05
+                                            }
+                                        ],
+                                        "conditionType": "condition",
+                                        "scoreBias": 0.07
+                                    }
+                                ]
+                            }
+                        ],
+                        "id": "5bfb",
+                        "effectType": "ability",
+                        "hasSelfReference": false
+                    },
+                    {
+                        "raw": "{4}{B}: Put target creature card from a graveyard onto the battlefield under its owner's control.",
+                        "parts":
+                        [
+                            {
+                                "raw": "{4}{b}: put target creature card from a graveyard onto the battlefield under its owner's control.",
+                                "parsed": "{4}{B}: Put target creature card from a graveyard onto the battlefield under its owner's control.",
+                                "id": "7dc6",
+                                "conditions":
+                                [
+                                    {
+                                        "text": "{4}{b}:",
+                                        "canTriggerMultipleTimesPerTurn": true,
+                                        "isCompoundTrigger": false,
+                                        "duringOtherPlayersStep": null,
+                                        "isOptionalPlayerChoice": false,
+                                        "actionScope": "self",
+                                        "gameStateModifier": null,
+                                        "card":
+                                        {
+                                            "this":
+                                            {
+                                                "isOrStatement": false,
+                                                "actions":
+                                                []
+                                            },
+                                            "dependencies":
+                                            {
+                                                "isOrStatement": false,
+                                                "actions":
+                                                []
+                                            }
+                                        },
+                                        "manaProduced":
+                                        {
+                                            "colors":
+                                            [],
+                                            "quantity": 0
+                                        },
+                                        "extra":
+                                        {
+                                            "line":
+                                            {},
+                                            "part":
+                                            {},
+                                            "this":
+                                            {}
+                                        },
+                                        "id": "9144",
+                                        "rawText": "{4}{b}:",
+                                        "qualifiers":
+                                        {},
+                                        "isSelfReference": false,
+                                        "isSelfAndOtherCardsReference": false,
+                                        "isSelfAndOtherPlayerReference": false,
+                                        "isInputCondition": false,
+                                        "isSingleActivationOnly": false,
+                                        "isSingleTriggerOnly": false,
+                                        "isEnterOrLeaveEffect": false,
+                                        "player":
+                                        {
+                                            "this":
+                                            {
+                                                "type": "self",
+                                                "isOrStatement": false,
+                                                "actions":
+                                                [
+                                                    "activate"
+                                                ]
+                                            },
+                                            "dependencies":
+                                            {
+                                                "type": "",
+                                                "isOrStatement": false,
+                                                "actions":
+                                                []
+                                            }
+                                        },
+                                        "zones":
+                                        {
+                                            "from":
+                                            [
+                                                "anywhere"
+                                            ],
+                                            "to":
+                                            [
+                                                "anywhere"
+                                            ]
+                                        },
+                                        "results":
+                                        [
+                                            {
+                                                "text": "put target creature card from a graveyard onto the battlefield under its owner's control.",
+                                                "canTriggerMultipleTimesPerTurn": true,
+                                                "isCompoundTrigger": false,
+                                                "duringOtherPlayersStep": null,
+                                                "isOptionalPlayerChoice": false,
+                                                "actionScope": "single",
+                                                "gameStateModifier": null,
+                                                "card":
+                                                {
+                                                    "this":
+                                                    {
+                                                        "isOrStatement": false,
+                                                        "actions":
+                                                        [
+                                                            "commit_a_crime"
+                                                        ]
+                                                    },
+                                                    "dependencies":
+                                                    {
+                                                        "isOrStatement": false,
+                                                        "actions":
+                                                        []
+                                                    }
+                                                },
+                                                "manaProduced":
+                                                {
+                                                    "colors":
+                                                    [],
+                                                    "quantity": 0
+                                                },
+                                                "extra":
+                                                {
+                                                    "line":
+                                                    {},
+                                                    "part":
+                                                    {},
+                                                    "this":
+                                                    {
+                                                        "hasReturnFromGraveyard": true
+                                                    }
+                                                },
+                                                "id": "74b0",
+                                                "rawText": "put target creature card from a graveyard onto the battlefield under its owner's control.",
+                                                "qualifiers":
+                                                {
+                                                    "type":
+                                                    {
+                                                        "list":
+                                                        [
+                                                            "creature"
+                                                        ],
+                                                        "allowOr": false
+                                                    }
+                                                },
+                                                "isSelfReference": false,
+                                                "isSelfAndOtherCardsReference": false,
+                                                "isSelfAndOtherPlayerReference": false,
+                                                "isInputCondition": false,
+                                                "isSingleActivationOnly": false,
+                                                "isSingleTriggerOnly": false,
+                                                "isEnterOrLeaveEffect": false,
+                                                "player":
+                                                {
+                                                    "this":
+                                                    {
+                                                        "type": "all",
+                                                        "isOrStatement": false,
+                                                        "actions":
+                                                        [
+                                                            "put_onto_battlefield"
+                                                        ]
+                                                    },
+                                                    "dependencies":
+                                                    {
+                                                        "type": "",
+                                                        "isOrStatement": false,
+                                                        "actions":
+                                                        []
+                                                    }
+                                                },
+                                                "zones":
+                                                {
+                                                    "from":
+                                                    [
+                                                        "graveyard"
+                                                    ],
+                                                    "to":
+                                                    [
+                                                        "battlefield"
+                                                    ]
+                                                },
+                                                "conditionType": "result",
+                                                "scoreBias": 0.03
+                                            }
+                                        ],
+                                        "conditionType": "condition",
+                                        "scoreBias": 0.05
+                                    }
+                                ]
+                            }
+                        ],
+                        "id": "9847",
+                        "effectType": "ability",
+                        "hasSelfReference": false
+                    },
+                    {
+                        "raw": "{4}{W}",
+                        "parts":
+                        [
+                            {
+                                "raw": "{4}{w}",
+                                "parsed": "{4}{W}",
+                                "id": "dde9",
+                                "conditions":
+                                [
+                                    {
+                                        "text": "{4}{w}",
+                                        "canTriggerMultipleTimesPerTurn": true,
+                                        "isCompoundTrigger": false,
+                                        "duringOtherPlayersStep": null,
+                                        "isOptionalPlayerChoice": false,
+                                        "actionScope": "self",
+                                        "gameStateModifier": null,
+                                        "card":
+                                        {
+                                            "this":
+                                            {
+                                                "isOrStatement": false,
+                                                "actions":
+                                                []
+                                            },
+                                            "dependencies":
+                                            {
+                                                "isOrStatement": false,
+                                                "actions":
+                                                []
+                                            }
+                                        },
+                                        "manaProduced":
+                                        {
+                                            "colors":
+                                            [],
+                                            "quantity": 0
+                                        },
+                                        "extra":
+                                        {
+                                            "line":
+                                            {},
+                                            "part":
+                                            {},
+                                            "this":
+                                            {}
+                                        },
+                                        "id": "5818",
+                                        "rawText": "{4}{w}",
+                                        "qualifiers":
+                                        {},
+                                        "isSelfReference": false,
+                                        "isSelfAndOtherCardsReference": false,
+                                        "isSelfAndOtherPlayerReference": false,
+                                        "isInputCondition": false,
+                                        "isSingleActivationOnly": false,
+                                        "isSingleTriggerOnly": false,
+                                        "isEnterOrLeaveEffect": false,
+                                        "player":
+                                        {
+                                            "this":
+                                            {
+                                                "type": "all",
+                                                "isOrStatement": false,
+                                                "actions":
+                                                []
+                                            },
+                                            "dependencies":
+                                            {
+                                                "type": "",
+                                                "isOrStatement": false,
+                                                "actions":
+                                                []
+                                            }
+                                        },
+                                        "zones":
+                                        {
+                                            "from":
+                                            [
+                                                "anywhere"
+                                            ],
+                                            "to":
+                                            [
+                                                "anywhere"
+                                            ]
+                                        },
+                                        "conditionType": "condition",
+                                        "scoreBias": 0.22
+                                    }
+                                ]
+                            }
+                        ],
+                        "id": "0265",
+                        "effectType": "castingCost",
+                        "hasSelfReference": false
+                    }
+                ]
+            },
+            "categories":
+            {
+                "total": 7,
+                "stats":
+                {
+                    "reanimator": true,
+                    "cantrip": true,
+                    "recursion": true,
+                    "stompy": true,
+                    "combat": true,
+                    "plusOnePlusOneCounters": true,
+                    "cheat": true
+                },
+                "categories":
+                {}
+            },
+            "scoring":
+            {
+                "reanimator":
+                [
+                    {
+                        "special":
+                        {
+                            "isCoinFlip": false,
+                            "preCoinFlipAdjustmentMaxScore": 7.45,
+                            "preCoinFlipAdjustmentScore": 0.1
+                        },
+                        "bias":
+                        {
+                            "castabilityBiasGenericCostDeduction": 0.32188758248682,
+                            "categoryBias": 1,
+                            "castabilityBias": 0.22313016014843,
+                            "preConditionBias": 0.68,
+                            "activationBias": 0.22313016014843,
+                            "upkeepBias": 1,
+                            "overallBias": 0.03,
+                            "scorePreBiasAdjustment": 1
+                        },
+                        "hasGenericKindredDependencies": false,
+                        "conditionText": "put target creature card from a graveyard onto the battlefield under its owner's control.",
+                        "castability":
+                        {
+                            "cmc": 5,
+                            "snow": 0,
+                            "x": 0,
+                            "totalForNonX": 5,
+                            "symbols":
+                            {
+                                "w":
+                                {
+                                    "count": 1
+                                }
+                            },
+                            "coloredPipCount": 1,
+                            "generic": 4,
+                            "phyrexian": 0,
+                            "hybrid": 0,
+                            "hasFreeCast": false,
+                            "hasFreeCastWithCaveat": false,
+                            "hasReductionEffect": false,
+                            "hasSpeedBonus": false,
+                            "costReductionContextIds": null,
+                            "hasRepeatableActivation": false,
+                            "additionalCosts":
+                            {
+                                "loyaltyCost": null,
+                                "isSuspend": false,
+                                "suspendCost":
+                                {},
+                                "suspendLength": 0,
+                                "sacrificeSelf": false,
+                                "payLife": false,
+                                "discardCard": false,
+                                "exileCard": false,
+                                "sacrificePermanent": false,
+                                "tapSelf": false,
+                                "qualifiers": 0,
+                                "isDiceRoll": false,
+                                "discardSelf": false,
+                                "exileSelf": false,
+                                "freeWithCaveat":
+                                {
+                                    "qualifiers": 0
+                                }
+                            },
+                            "score": 0,
+                            "baselineScore": 0
+                        },
+                        "activationCostScoring":
+                        {
+                            "bias": 0.22313016014843,
+                            "castabilityBiasGenericCostDeduction": 0.32188758248682,
+                            "castability":
+                            {
+                                "cmc": 5,
+                                "snow": 0,
+                                "x": 0,
+                                "totalForNonX": 5,
+                                "symbols":
+                                {
+                                    "b":
+                                    {
+                                        "count": 1
+                                    }
+                                },
+                                "coloredPipCount": 1,
+                                "generic": 4,
+                                "phyrexian": 0,
+                                "hybrid": 0,
+                                "hasFreeCast": false,
+                                "hasFreeCastWithCaveat": false,
+                                "hasReductionEffect": false,
+                                "hasSpeedBonus": false,
+                                "costReductionContextIds": null,
+                                "hasRepeatableActivation": true,
+                                "additionalCosts":
+                                {
+                                    "loyaltyCost": null,
+                                    "isSuspend": false,
+                                    "suspendCost":
+                                    {},
+                                    "suspendLength": 0,
+                                    "sacrificeSelf": false,
+                                    "payLife": false,
+                                    "discardCard": false,
+                                    "exileCard": false,
+                                    "sacrificePermanent": false,
+                                    "tapSelf": false,
+                                    "qualifiers": 0,
+                                    "isDiceRoll": false,
+                                    "discardSelf": false,
+                                    "exileSelf": false,
+                                    "freeWithCaveat":
+                                    {
+                                        "qualifiers": 0
+                                    }
+                                },
+                                "score": 0,
+                                "baselineScore": 0
+                            }
+                        },
+                        "postProcessorScore": 1,
+                        "isSingleTriggerOnly": false,
+                        "contextIds":
+                        {
+                            "line": "9847",
+                            "part": "7dc6",
+                            "preCondition": "9144",
+                            "category": "reanimator",
+                            "condition": "74b0"
+                        },
+                        "effectType": "ability",
+                        "score": 0.1,
+                        "maxScore": 7.45,
+                        "scoreRating": 0.1,
+                        "hasAnySynergyDependencies": true,
+                        "hasComplexSynergyDependencies": false,
+                        "hasNoneBaseDependency": false,
+                        "allowSynergyAdjustment": true
+                    }
+                ],
+                "cantrip":
+                [
+                    {
+                        "special":
+                        {
+                            "isCoinFlip": false,
+                            "preCoinFlipAdjustmentMaxScore": 20,
+                            "preCoinFlipAdjustmentScore": 0.31
+                        },
+                        "bias":
+                        {
+                            "castabilityBiasGenericCostDeduction": 0.32188758248682,
+                            "categoryBias": 0.3,
+                            "castabilityBias": 0.22313016014843,
+                            "preConditionBias": 0.76,
+                            "activationBias": 0.301194211912202,
+                            "upkeepBias": 1,
+                            "overallBias": 0.05,
+                            "scorePreBiasAdjustment": 20
+                        },
+                        "hasGenericKindredDependencies": false,
+                        "conditionText": "target player draws a card.",
+                        "castability":
+                        {
+                            "cmc": 5,
+                            "snow": 0,
+                            "x": 0,
+                            "totalForNonX": 5,
+                            "symbols":
+                            {
+                                "w":
+                                {
+                                    "count": 1
+                                }
+                            },
+                            "coloredPipCount": 1,
+                            "generic": 4,
+                            "phyrexian": 0,
+                            "hybrid": 0,
+                            "hasFreeCast": false,
+                            "hasFreeCastWithCaveat": false,
+                            "hasReductionEffect": false,
+                            "hasSpeedBonus": false,
+                            "costReductionContextIds": null,
+                            "hasRepeatableActivation": false,
+                            "additionalCosts":
+                            {
+                                "loyaltyCost": null,
+                                "isSuspend": false,
+                                "suspendCost":
+                                {},
+                                "suspendLength": 0,
+                                "sacrificeSelf": false,
+                                "payLife": false,
+                                "discardCard": false,
+                                "exileCard": false,
+                                "sacrificePermanent": false,
+                                "tapSelf": false,
+                                "qualifiers": 0,
+                                "isDiceRoll": false,
+                                "discardSelf": false,
+                                "exileSelf": false,
+                                "freeWithCaveat":
+                                {
+                                    "qualifiers": 0
+                                }
+                            },
+                            "score": 0,
+                            "baselineScore": 0
+                        },
+                        "activationCostScoring":
+                        {
+                            "bias": 0.301194211912202,
+                            "castabilityBiasGenericCostDeduction": 0.207944154167984,
+                            "castability":
+                            {
+                                "cmc": 4,
+                                "snow": 0,
+                                "x": 0,
+                                "totalForNonX": 4,
+                                "symbols":
+                                {
+                                    "u":
+                                    {
+                                        "count": 1
+                                    }
+                                },
+                                "coloredPipCount": 1,
+                                "generic": 3,
+                                "phyrexian": 0,
+                                "hybrid": 0,
+                                "hasFreeCast": false,
+                                "hasFreeCastWithCaveat": false,
+                                "hasReductionEffect": false,
+                                "hasSpeedBonus": false,
+                                "costReductionContextIds": null,
+                                "hasRepeatableActivation": true,
+                                "additionalCosts":
+                                {
+                                    "loyaltyCost": null,
+                                    "isSuspend": false,
+                                    "suspendCost":
+                                    {},
+                                    "suspendLength": 0,
+                                    "sacrificeSelf": false,
+                                    "payLife": false,
+                                    "discardCard": false,
+                                    "exileCard": false,
+                                    "sacrificePermanent": false,
+                                    "tapSelf": false,
+                                    "qualifiers": 0,
+                                    "isDiceRoll": false,
+                                    "discardSelf": false,
+                                    "exileSelf": false,
+                                    "freeWithCaveat":
+                                    {
+                                        "qualifiers": 0
+                                    }
+                                },
+                                "score": 0,
+                                "baselineScore": 0
+                            }
+                        },
+                        "postProcessorScore": 20,
+                        "isSingleTriggerOnly": false,
+                        "contextIds":
+                        {
+                            "line": "5bfb",
+                            "part": "9cee",
+                            "preCondition": "9b67",
+                            "category": "cantrip",
+                            "condition": "3038"
+                        },
+                        "effectType": "ability",
+                        "score": 0.31,
+                        "maxScore": 20,
+                        "scoreRating": 0.31,
+                        "hasAnySynergyDependencies": false,
+                        "hasComplexSynergyDependencies": false,
+                        "hasNoneBaseDependency": false,
+                        "allowSynergyAdjustment": true
+                    }
+                ],
+                "recursion":
+                [
+                    {
+                        "special":
+                        {
+                            "isCoinFlip": false,
+                            "preCoinFlipAdjustmentMaxScore": 19.45,
+                            "preCoinFlipAdjustmentScore": 0.74
+                        },
+                        "bias":
+                        {
+                            "castabilityBiasGenericCostDeduction": 0.32188758248682,
+                            "categoryBias": 1.35,
+                            "castabilityBias": 0.22313016014843,
+                            "preConditionBias": 0.68,
+                            "activationBias": 0.22313016014843,
+                            "upkeepBias": 1,
+                            "overallBias": 0.03,
+                            "scorePreBiasAdjustment": 20
+                        },
+                        "hasGenericKindredDependencies": false,
+                        "conditionText": "put target creature card from a graveyard onto the battlefield under its owner's control.",
+                        "castability":
+                        {
+                            "cmc": 5,
+                            "snow": 0,
+                            "x": 0,
+                            "totalForNonX": 5,
+                            "symbols":
+                            {
+                                "w":
+                                {
+                                    "count": 1
+                                }
+                            },
+                            "coloredPipCount": 1,
+                            "generic": 4,
+                            "phyrexian": 0,
+                            "hybrid": 0,
+                            "hasFreeCast": false,
+                            "hasFreeCastWithCaveat": false,
+                            "hasReductionEffect": false,
+                            "hasSpeedBonus": false,
+                            "costReductionContextIds": null,
+                            "hasRepeatableActivation": false,
+                            "additionalCosts":
+                            {
+                                "loyaltyCost": null,
+                                "isSuspend": false,
+                                "suspendCost":
+                                {},
+                                "suspendLength": 0,
+                                "sacrificeSelf": false,
+                                "payLife": false,
+                                "discardCard": false,
+                                "exileCard": false,
+                                "sacrificePermanent": false,
+                                "tapSelf": false,
+                                "qualifiers": 0,
+                                "isDiceRoll": false,
+                                "discardSelf": false,
+                                "exileSelf": false,
+                                "freeWithCaveat":
+                                {
+                                    "qualifiers": 0
+                                }
+                            },
+                            "score": 0,
+                            "baselineScore": 0
+                        },
+                        "activationCostScoring":
+                        {
+                            "bias": 0.22313016014843,
+                            "castabilityBiasGenericCostDeduction": 0.32188758248682,
+                            "castability":
+                            {
+                                "cmc": 5,
+                                "snow": 0,
+                                "x": 0,
+                                "totalForNonX": 5,
+                                "symbols":
+                                {
+                                    "b":
+                                    {
+                                        "count": 1
+                                    }
+                                },
+                                "coloredPipCount": 1,
+                                "generic": 4,
+                                "phyrexian": 0,
+                                "hybrid": 0,
+                                "hasFreeCast": false,
+                                "hasFreeCastWithCaveat": false,
+                                "hasReductionEffect": false,
+                                "hasSpeedBonus": false,
+                                "costReductionContextIds": null,
+                                "hasRepeatableActivation": true,
+                                "additionalCosts":
+                                {
+                                    "loyaltyCost": null,
+                                    "isSuspend": false,
+                                    "suspendCost":
+                                    {},
+                                    "suspendLength": 0,
+                                    "sacrificeSelf": false,
+                                    "payLife": false,
+                                    "discardCard": false,
+                                    "exileCard": false,
+                                    "sacrificePermanent": false,
+                                    "tapSelf": false,
+                                    "qualifiers": 0,
+                                    "isDiceRoll": false,
+                                    "discardSelf": false,
+                                    "exileSelf": false,
+                                    "freeWithCaveat":
+                                    {
+                                        "qualifiers": 0
+                                    }
+                                },
+                                "score": 0,
+                                "baselineScore": 0
+                            }
+                        },
+                        "postProcessorScore": 20,
+                        "isSingleTriggerOnly": false,
+                        "contextIds":
+                        {
+                            "line": "9847",
+                            "part": "7dc6",
+                            "preCondition": "9144",
+                            "category": "recursion",
+                            "condition": "74b0"
+                        },
+                        "effectType": "ability",
+                        "score": 0.74,
+                        "maxScore": 19.45,
+                        "scoreRating": 0.74,
+                        "hasAnySynergyDependencies": true,
+                        "hasComplexSynergyDependencies": false,
+                        "hasNoneBaseDependency": false,
+                        "allowSynergyAdjustment": true
+                    }
+                ],
+                "stompy":
+                [
+                    {
+                        "special":
+                        {
+                            "isCoinFlip": false,
+                            "preCoinFlipAdjustmentMaxScore": 20,
+                            "preCoinFlipAdjustmentScore": 4.5
+                        },
+                        "bias":
+                        {
+                            "castabilityBiasGenericCostDeduction": 0.32188758248682,
+                            "categoryBias": 1,
+                            "castabilityBias": 0.5,
+                            "preConditionBias": 1,
+                            "activationBias": 1,
+                            "upkeepBias": 1,
+                            "overallBias": 0.5,
+                            "scorePreBiasAdjustment": 15
+                        },
+                        "hasGenericKindredDependencies": false,
+                        "conditionText": "{4}{w}",
+                        "castability":
+                        {
+                            "cmc": 5,
+                            "snow": 0,
+                            "x": 0,
+                            "totalForNonX": 5,
+                            "symbols":
+                            {
+                                "w":
+                                {
+                                    "count": 1
+                                }
+                            },
+                            "coloredPipCount": 1,
+                            "generic": 4,
+                            "phyrexian": 0,
+                            "hybrid": 0,
+                            "hasFreeCast": false,
+                            "hasFreeCastWithCaveat": false,
+                            "hasReductionEffect": false,
+                            "hasSpeedBonus": false,
+                            "costReductionContextIds": null,
+                            "hasRepeatableActivation": false,
+                            "additionalCosts":
+                            {
+                                "loyaltyCost": null,
+                                "isSuspend": false,
+                                "suspendCost":
+                                {},
+                                "suspendLength": 0,
+                                "sacrificeSelf": false,
+                                "payLife": false,
+                                "discardCard": false,
+                                "exileCard": false,
+                                "sacrificePermanent": false,
+                                "tapSelf": false,
+                                "qualifiers": 0,
+                                "isDiceRoll": false,
+                                "discardSelf": false,
+                                "exileSelf": false,
+                                "freeWithCaveat":
+                                {
+                                    "qualifiers": 0
+                                }
+                            },
+                            "score": 0,
+                            "baselineScore": 0
+                        },
+                        "activationCostScoring":
+                        {
+                            "cmc": 5,
+                            "snow": 0,
+                            "x": 0,
+                            "totalForNonX": 5,
+                            "symbols":
+                            {
+                                "w":
+                                {
+                                    "count": 1
+                                }
+                            },
+                            "coloredPipCount": 1,
+                            "generic": 4,
+                            "phyrexian": 0,
+                            "hybrid": 0,
+                            "hasFreeCast": false,
+                            "hasFreeCastWithCaveat": false,
+                            "hasReductionEffect": false,
+                            "hasSpeedBonus": false,
+                            "costReductionContextIds": null,
+                            "hasRepeatableActivation": false,
+                            "additionalCosts":
+                            {
+                                "loyaltyCost": null,
+                                "isSuspend": false,
+                                "suspendCost":
+                                {},
+                                "suspendLength": 0,
+                                "sacrificeSelf": false,
+                                "payLife": false,
+                                "discardCard": false,
+                                "exileCard": false,
+                                "sacrificePermanent": false,
+                                "tapSelf": false,
+                                "qualifiers": 0,
+                                "isDiceRoll": false,
+                                "discardSelf": false,
+                                "exileSelf": false,
+                                "freeWithCaveat":
+                                {
+                                    "qualifiers": 0
+                                }
+                            },
+                            "score": 0,
+                            "baselineScore": 0
+                        },
+                        "postProcessorScore": 15,
+                        "contextIds":
+                        {
+                            "line": "0265",
+                            "part": "dde9",
+                            "preCondition": null,
+                            "category": "stompy",
+                            "condition": "5818"
+                        },
+                        "effectType": "castingCost",
+                        "score": 4.5,
+                        "maxScore": 20,
+                        "scoreRating": 4.5,
+                        "hasAnySynergyDependencies": false,
+                        "hasComplexSynergyDependencies": false,
+                        "hasNoneBaseDependency": false,
+                        "allowSynergyAdjustment": true
+                    }
+                ],
+                "combat":
+                [
+                    {
+                        "special":
+                        {
+                            "isCoinFlip": false,
+                            "preCoinFlipAdjustmentMaxScore": 7.45,
+                            "preCoinFlipAdjustmentScore": 0.13
+                        },
+                        "bias":
+                        {
+                            "castabilityBiasGenericCostDeduction": 0.32188758248682,
+                            "categoryBias": 1,
+                            "castabilityBias": 0.22313016014843,
+                            "preConditionBias": 1,
+                            "activationBias": 0.740818220681718,
+                            "upkeepBias": 1,
+                            "overallBias": 0.17,
+                            "scorePreBiasAdjustment": 1
+                        },
+                        "hasGenericKindredDependencies": false,
+                        "conditionText": "all creatures gain trample and haste until end of turn.",
+                        "castability":
+                        {
+                            "cmc": 5,
+                            "snow": 0,
+                            "x": 0,
+                            "totalForNonX": 5,
+                            "symbols":
+                            {
+                                "w":
+                                {
+                                    "count": 1
+                                }
+                            },
+                            "coloredPipCount": 1,
+                            "generic": 4,
+                            "phyrexian": 0,
+                            "hybrid": 0,
+                            "hasFreeCast": false,
+                            "hasFreeCastWithCaveat": false,
+                            "hasReductionEffect": false,
+                            "hasSpeedBonus": false,
+                            "costReductionContextIds": null,
+                            "hasRepeatableActivation": false,
+                            "additionalCosts":
+                            {
+                                "loyaltyCost": null,
+                                "isSuspend": false,
+                                "suspendCost":
+                                {},
+                                "suspendLength": 0,
+                                "sacrificeSelf": false,
+                                "payLife": false,
+                                "discardCard": false,
+                                "exileCard": false,
+                                "sacrificePermanent": false,
+                                "tapSelf": false,
+                                "qualifiers": 0,
+                                "isDiceRoll": false,
+                                "discardSelf": false,
+                                "exileSelf": false,
+                                "freeWithCaveat":
+                                {
+                                    "qualifiers": 0
+                                }
+                            },
+                            "score": 0,
+                            "baselineScore": 0
+                        },
+                        "activationCostScoring":
+                        {
+                            "bias": 0.740818220681718,
+                            "castabilityBiasGenericCostDeduction": 0,
+                            "castability":
+                            {
+                                "cmc": 1,
+                                "snow": 0,
+                                "x": 0,
+                                "totalForNonX": 1,
+                                "symbols":
+                                {
+                                    "r":
+                                    {
+                                        "count": 1
+                                    }
+                                },
+                                "coloredPipCount": 1,
+                                "generic": 0,
+                                "phyrexian": 0,
+                                "hybrid": 0,
+                                "hasFreeCast": false,
+                                "hasFreeCastWithCaveat": false,
+                                "hasReductionEffect": false,
+                                "hasSpeedBonus": false,
+                                "costReductionContextIds": null,
+                                "hasRepeatableActivation": true,
+                                "additionalCosts":
+                                {
+                                    "loyaltyCost": null,
+                                    "isSuspend": false,
+                                    "suspendCost":
+                                    {},
+                                    "suspendLength": 0,
+                                    "sacrificeSelf": false,
+                                    "payLife": false,
+                                    "discardCard": false,
+                                    "exileCard": false,
+                                    "sacrificePermanent": false,
+                                    "tapSelf": false,
+                                    "qualifiers": 0,
+                                    "isDiceRoll": false,
+                                    "discardSelf": false,
+                                    "exileSelf": false,
+                                    "freeWithCaveat":
+                                    {
+                                        "qualifiers": 0
+                                    }
+                                },
+                                "score": 0,
+                                "baselineScore": 0
+                            }
+                        },
+                        "postProcessorScore": 1,
+                        "isSingleTriggerOnly": false,
+                        "contextIds":
+                        {
+                            "line": "f83d",
+                            "part": "a174",
+                            "preCondition": "9d30",
+                            "category": "combat",
+                            "condition": "dd9b"
+                        },
+                        "effectType": "ability",
+                        "score": 0.13,
+                        "maxScore": 7.45,
+                        "scoreRating": 0.13,
+                        "hasAnySynergyDependencies": true,
+                        "hasComplexSynergyDependencies": false,
+                        "hasNoneBaseDependency": false,
+                        "allowSynergyAdjustment": true
+                    }
+                ],
+                "plusOnePlusOneCounters":
+                [
+                    {
+                        "special":
+                        {
+                            "isCoinFlip": false,
+                            "preCoinFlipAdjustmentMaxScore": 10.9,
+                            "preCoinFlipAdjustmentScore": 0.1
+                        },
+                        "bias":
+                        {
+                            "castabilityBiasGenericCostDeduction": 0.32188758248682,
+                            "categoryBias": 1,
+                            "castabilityBias": 0.22313016014843,
+                            "preConditionBias": 0.92,
+                            "activationBias": 0.548811636094027,
+                            "upkeepBias": 1,
+                            "overallBias": 0.11,
+                            "scorePreBiasAdjustment": 1
+                        },
+                        "hasGenericKindredDependencies": false,
+                        "conditionText": "put a +1/+1 counter on target creature.",
+                        "castability":
+                        {
+                            "cmc": 5,
+                            "snow": 0,
+                            "x": 0,
+                            "totalForNonX": 5,
+                            "symbols":
+                            {
+                                "w":
+                                {
+                                    "count": 1
+                                }
+                            },
+                            "coloredPipCount": 1,
+                            "generic": 4,
+                            "phyrexian": 0,
+                            "hybrid": 0,
+                            "hasFreeCast": false,
+                            "hasFreeCastWithCaveat": false,
+                            "hasReductionEffect": false,
+                            "hasSpeedBonus": false,
+                            "costReductionContextIds": null,
+                            "hasRepeatableActivation": false,
+                            "additionalCosts":
+                            {
+                                "loyaltyCost": null,
+                                "isSuspend": false,
+                                "suspendCost":
+                                {},
+                                "suspendLength": 0,
+                                "sacrificeSelf": false,
+                                "payLife": false,
+                                "discardCard": false,
+                                "exileCard": false,
+                                "sacrificePermanent": false,
+                                "tapSelf": false,
+                                "qualifiers": 0,
+                                "isDiceRoll": false,
+                                "discardSelf": false,
+                                "exileSelf": false,
+                                "freeWithCaveat":
+                                {
+                                    "qualifiers": 0
+                                }
+                            },
+                            "score": 0,
+                            "baselineScore": 0
+                        },
+                        "activationCostScoring":
+                        {
+                            "bias": 0.548811636094027,
+                            "castabilityBiasGenericCostDeduction": 0.0346573590279973,
+                            "castability":
+                            {
+                                "cmc": 2,
+                                "snow": 0,
+                                "x": 0,
+                                "totalForNonX": 2,
+                                "symbols":
+                                {
+                                    "g":
+                                    {
+                                        "count": 1
+                                    }
+                                },
+                                "coloredPipCount": 1,
+                                "generic": 1,
+                                "phyrexian": 0,
+                                "hybrid": 0,
+                                "hasFreeCast": false,
+                                "hasFreeCastWithCaveat": false,
+                                "hasReductionEffect": false,
+                                "hasSpeedBonus": false,
+                                "costReductionContextIds": null,
+                                "hasRepeatableActivation": true,
+                                "additionalCosts":
+                                {
+                                    "loyaltyCost": null,
+                                    "isSuspend": false,
+                                    "suspendCost":
+                                    {},
+                                    "suspendLength": 0,
+                                    "sacrificeSelf": false,
+                                    "payLife": false,
+                                    "discardCard": false,
+                                    "exileCard": false,
+                                    "sacrificePermanent": false,
+                                    "tapSelf": false,
+                                    "qualifiers": 0,
+                                    "isDiceRoll": false,
+                                    "discardSelf": false,
+                                    "exileSelf": false,
+                                    "freeWithCaveat":
+                                    {
+                                        "qualifiers": 0
+                                    }
+                                },
+                                "score": 0,
+                                "baselineScore": 0
+                            }
+                        },
+                        "postProcessorScore": 1,
+                        "isSingleTriggerOnly": false,
+                        "contextIds":
+                        {
+                            "line": "fd87",
+                            "part": "95f7",
+                            "preCondition": "2284",
+                            "category": "plusOnePlusOneCounters",
+                            "condition": "0ca1"
+                        },
+                        "effectType": "ability",
+                        "score": 0.1,
+                        "maxScore": 10.9,
+                        "scoreRating": 0.1,
+                        "hasAnySynergyDependencies": true,
+                        "hasComplexSynergyDependencies": true,
+                        "hasNoneBaseDependency": false,
+                        "allowSynergyAdjustment": true
+                    }
+                ],
+                "cheat":
+                [
+                    {
+                        "special":
+                        {
+                            "isCoinFlip": false,
+                            "preCoinFlipAdjustmentMaxScore": 8,
+                            "preCoinFlipAdjustmentScore": 0.1
+                        },
+                        "bias":
+                        {
+                            "castabilityBiasGenericCostDeduction": 0.32188758248682,
+                            "categoryBias": 1,
+                            "castabilityBias": 0.22313016014843,
+                            "preConditionBias": 1,
+                            "activationBias": 0.22313016014843,
+                            "upkeepBias": 1,
+                            "overallBias": 0.05,
+                            "scorePreBiasAdjustment": 1
+                        },
+                        "hasGenericKindredDependencies": false,
+                        "conditionText": "{4}{b}:",
+                        "castability":
+                        {
+                            "cmc": 5,
+                            "snow": 0,
+                            "x": 0,
+                            "totalForNonX": 5,
+                            "symbols":
+                            {
+                                "w":
+                                {
+                                    "count": 1
+                                }
+                            },
+                            "coloredPipCount": 1,
+                            "generic": 4,
+                            "phyrexian": 0,
+                            "hybrid": 0,
+                            "hasFreeCast": false,
+                            "hasFreeCastWithCaveat": false,
+                            "hasReductionEffect": false,
+                            "hasSpeedBonus": false,
+                            "costReductionContextIds": null,
+                            "hasRepeatableActivation": false,
+                            "additionalCosts":
+                            {
+                                "loyaltyCost": null,
+                                "isSuspend": false,
+                                "suspendCost":
+                                {},
+                                "suspendLength": 0,
+                                "sacrificeSelf": false,
+                                "payLife": false,
+                                "discardCard": false,
+                                "exileCard": false,
+                                "sacrificePermanent": false,
+                                "tapSelf": false,
+                                "qualifiers": 0,
+                                "isDiceRoll": false,
+                                "discardSelf": false,
+                                "exileSelf": false,
+                                "freeWithCaveat":
+                                {
+                                    "qualifiers": 0
+                                }
+                            },
+                            "score": 0,
+                            "baselineScore": 0
+                        },
+                        "activationCostScoring":
+                        {
+                            "bias": 0.22313016014843,
+                            "castabilityBiasGenericCostDeduction": 0.32188758248682,
+                            "castability":
+                            {
+                                "cmc": 5,
+                                "snow": 0,
+                                "x": 0,
+                                "totalForNonX": 5,
+                                "symbols":
+                                {
+                                    "b":
+                                    {
+                                        "count": 1
+                                    }
+                                },
+                                "coloredPipCount": 1,
+                                "generic": 4,
+                                "phyrexian": 0,
+                                "hybrid": 0,
+                                "hasFreeCast": false,
+                                "hasFreeCastWithCaveat": false,
+                                "hasReductionEffect": false,
+                                "hasSpeedBonus": false,
+                                "costReductionContextIds": null,
+                                "hasRepeatableActivation": true,
+                                "additionalCosts":
+                                {
+                                    "loyaltyCost": null,
+                                    "isSuspend": false,
+                                    "suspendCost":
+                                    {},
+                                    "suspendLength": 0,
+                                    "sacrificeSelf": false,
+                                    "payLife": false,
+                                    "discardCard": false,
+                                    "exileCard": false,
+                                    "sacrificePermanent": false,
+                                    "tapSelf": false,
+                                    "qualifiers": 0,
+                                    "isDiceRoll": false,
+                                    "discardSelf": false,
+                                    "exileSelf": false,
+                                    "freeWithCaveat":
+                                    {
+                                        "qualifiers": 0
+                                    }
+                                },
+                                "score": 0,
+                                "baselineScore": 0
+                            }
+                        },
+                        "postProcessorScore": 1,
+                        "contextIds":
+                        {
+                            "line": "9847",
+                            "part": "7dc6",
+                            "preCondition": null,
+                            "category": "cheat",
+                            "condition": "9144"
+                        },
+                        "effectType": "ability",
+                        "score": 0.1,
+                        "maxScore": 8,
+                        "scoreRating": 0.1,
+                        "hasAnySynergyDependencies": false,
+                        "hasComplexSynergyDependencies": false,
+                        "hasNoneBaseDependency": false,
+                        "allowSynergyAdjustment": true
+                    }
+                ]
+            },
+            "edhRecSalt": 1.092,
+            "saltCategories":
+            {
+                "edhrec":
+                {
+                    "score": 1.092
+                },
+                "total": 1.092
+            }
+        }
+    },
+    "status":
+    {
+        "exists": true,
+        "CARD_METADATA": true,
+        "CARD_CONTEXT_RULES": true,
+        "CARD_CATEGORY_RULES": true,
+        "SALT_CATEGORY_RULES": true,
+        "invalid": false
+    },
+    "versioning":
+    {
+        "category": "versioning",
+        "containerCategory": "cards",
+        "CARD_CONTEXT_RULES": "12.840",
+        "CARD_CATEGORY_RULES": "21.765",
+        "CARD_METADATA": "5.188",
+        "versioning":
+        {
+            "CACHE_ENGINE_VERSION": 4.036
+        },
+        "SALT_CATEGORY_RULES": "1.429",
+        "id": "versioning_kenrith_the_returned_king_cards"
+    }
+}

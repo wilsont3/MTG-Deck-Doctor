@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{35701E75-1889-4C5C-AD61-30D7063FB9FC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeckDoctor.Core", "src\DeckDoctor.Core\DeckDoctor.Core.csproj", "{25B7291A-01A5-4FA2-876E-F8C24864573C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeckDoctor.Cli", "src\DeckDoctor.Cli\DeckDoctor.Cli.csproj", "{F1569E77-6CA2-4CA8-92F8-D8C389BD8249}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{25B7291A-01A5-4FA2-876E-F8C24864573C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25B7291A-01A5-4FA2-876E-F8C24864573C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25B7291A-01A5-4FA2-876E-F8C24864573C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25B7291A-01A5-4FA2-876E-F8C24864573C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1569E77-6CA2-4CA8-92F8-D8C389BD8249}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1569E77-6CA2-4CA8-92F8-D8C389BD8249}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1569E77-6CA2-4CA8-92F8-D8C389BD8249}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1569E77-6CA2-4CA8-92F8-D8C389BD8249}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{25B7291A-01A5-4FA2-876E-F8C24864573C} = {35701E75-1889-4C5C-AD61-30D7063FB9FC}
+		{F1569E77-6CA2-4CA8-92F8-D8C389BD8249} = {35701E75-1889-4C5C-AD61-30D7063FB9FC}
+	EndGlobalSection
+EndGlobal

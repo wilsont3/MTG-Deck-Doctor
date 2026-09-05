@@ -1,0 +1,958 @@
+{
+    "category": "cards",
+    "compressionType": "@mongodb-js/zstd",
+    "name": "Sheoldred, the Apocalypse",
+    "color_identity":
+    [
+        "B"
+    ],
+    "id": "sheoldred_the_apocalypse",
+    "reserved": false,
+    "lang": "en",
+    "digital": false,
+    "games":
+    [
+        "paper",
+        "arena",
+        "mtgo"
+    ],
+    "isCommanderLegal": true,
+    "set_name": "Dominaria United",
+    "set": "dmu",
+    "frontFaceId": "sheoldred_the_apocalypse",
+    "layout": "normal",
+    "salt": 2.03316326530612,
+    "price":
+    {
+        "usd": "95.36"
+    },
+    "faces":
+    {
+        "sheoldred_the_apocalypse":
+        {
+            "faceId": "sheoldred_the_apocalypse",
+            "layout": "normal",
+            "name": "Sheoldred, the Apocalypse",
+            "containerId": "sheoldred_the_apocalypse",
+            "containerName": "Sheoldred, the Apocalypse",
+            "parseIndividually": true,
+            "isFrontFace": true,
+            "containerTypesList":
+            [
+                "legendary",
+                "creature",
+                "phyrexian",
+                "praetor"
+            ],
+            "frontFaceId": "sheoldred_the_apocalypse",
+            "id": "sheoldred_the_apocalypse",
+            "salt": 7.03316326530612,
+            "metadata":
+            {
+                "containerTypesList":
+                [
+                    "legendary",
+                    "creature",
+                    "phyrexian",
+                    "praetor"
+                ],
+                "type_line": "Legendary Creature — Phyrexian Praetor",
+                "power": "4",
+                "toughness": "5",
+                "keywords":
+                [
+                    "deathtouch"
+                ],
+                "cmc": 4,
+                "oracle": "Deathtouch\nWhenever you draw a card, you gain 2 life.\nWhenever an opponent draws a card, they lose 2 life.",
+                "type": "legendary creature — phyrexian praetor",
+                "typesList":
+                [
+                    "legendary",
+                    "creature",
+                    "phyrexian",
+                    "praetor"
+                ],
+                "color_identity":
+                [
+                    "B"
+                ],
+                "colors":
+                [
+                    "B"
+                ],
+                "image_uris":
+                {
+                    "small": "https://cards.scryfall.io/small/front/d/6/d67be074-cdd4-41d9-ac89-0a0456c4e4b2.jpg?1674057568",
+                    "normal": "https://cards.scryfall.io/normal/front/d/6/d67be074-cdd4-41d9-ac89-0a0456c4e4b2.jpg?1674057568",
+                    "large": "https://cards.scryfall.io/large/front/d/6/d67be074-cdd4-41d9-ac89-0a0456c4e4b2.jpg?1674057568",
+                    "png": "https://cards.scryfall.io/png/front/d/6/d67be074-cdd4-41d9-ac89-0a0456c4e4b2.png?1674057568",
+                    "art_crop": "https://cards.scryfall.io/art_crop/front/d/6/d67be074-cdd4-41d9-ac89-0a0456c4e4b2.jpg?1674057568",
+                    "border_crop": "https://cards.scryfall.io/border_crop/front/d/6/d67be074-cdd4-41d9-ac89-0a0456c4e4b2.jpg?1674057568"
+                },
+                "mana_cost": "{2}{B}{B}",
+                "reserved": false,
+                "lang": "en",
+                "digital": false,
+                "games":
+                [
+                    "paper",
+                    "arena",
+                    "mtgo"
+                ],
+                "artist": "Chris Rahn",
+                "loyalty": null
+            },
+            "castData":
+            {
+                "bias": 0.301194211912202,
+                "castabilityBiasGenericCostDeduction": 0.109861228866811,
+                "castability":
+                {
+                    "cmc": 4,
+                    "snow": 0,
+                    "x": 0,
+                    "totalForNonX": 4,
+                    "symbols":
+                    {
+                        "b":
+                        {
+                            "count": 2
+                        }
+                    },
+                    "coloredPipCount": 2,
+                    "generic": 2,
+                    "phyrexian": 0,
+                    "hybrid": 0,
+                    "hasFreeCast": false,
+                    "hasFreeCastWithCaveat": false,
+                    "hasReductionEffect": false,
+                    "hasSpeedBonus": false,
+                    "costReductionContextIds": null,
+                    "hasRepeatableActivation": false,
+                    "additionalCosts":
+                    {
+                        "loyaltyCost": null,
+                        "isSuspend": false,
+                        "suspendCost":
+                        {},
+                        "suspendLength": 0,
+                        "sacrificeSelf": false,
+                        "payLife": false,
+                        "discardCard": false,
+                        "exileCard": false,
+                        "sacrificePermanent": false,
+                        "tapSelf": false,
+                        "qualifiers": 0,
+                        "isDiceRoll": false,
+                        "discardSelf": false,
+                        "exileSelf": false,
+                        "freeWithCaveat":
+                        {
+                            "qualifiers": 0
+                        }
+                    },
+                    "score": 0,
+                    "baselineScore": 0
+                }
+            },
+            "context":
+            {
+                "raw": "Deathtouch\nWhenever you draw a card, you gain 2 life.\nWhenever an opponent draws a card, they lose 2 life.",
+                "keywords":
+                [
+                    "deathtouch"
+                ],
+                "names":
+                [
+                    "Sheoldred, the Apocalypse"
+                ],
+                "parsedNames":
+                [],
+                "lines":
+                [
+                    {
+                        "raw": "Deathtouch",
+                        "parts":
+                        [
+                            {
+                                "raw": "deathtouch",
+                                "parsed": "Deathtouch",
+                                "id": "62cb",
+                                "conditions":
+                                [
+                                    {
+                                        "text": "deathtouch",
+                                        "canTriggerMultipleTimesPerTurn": true,
+                                        "isCompoundTrigger": false,
+                                        "duringOtherPlayersStep": null,
+                                        "isOptionalPlayerChoice": false,
+                                        "actionScope": "self",
+                                        "gameStateModifier": null,
+                                        "card":
+                                        {
+                                            "this":
+                                            {
+                                                "isOrStatement": false,
+                                                "actions":
+                                                []
+                                            },
+                                            "dependencies":
+                                            {
+                                                "isOrStatement": false,
+                                                "actions":
+                                                []
+                                            }
+                                        },
+                                        "manaProduced":
+                                        {
+                                            "colors":
+                                            [],
+                                            "quantity": 0
+                                        },
+                                        "extra":
+                                        {
+                                            "line":
+                                            {},
+                                            "part":
+                                            {},
+                                            "this":
+                                            {}
+                                        },
+                                        "id": "95ee",
+                                        "rawText": "deathtouch",
+                                        "qualifiers":
+                                        {},
+                                        "isSelfReference": false,
+                                        "isSelfAndOtherCardsReference": false,
+                                        "isSelfAndOtherPlayerReference": false,
+                                        "isInputCondition": false,
+                                        "isSingleActivationOnly": false,
+                                        "isSingleTriggerOnly": false,
+                                        "isEnterOrLeaveEffect": false,
+                                        "player":
+                                        {
+                                            "this":
+                                            {
+                                                "type": "all",
+                                                "isOrStatement": false,
+                                                "actions":
+                                                [
+                                                    "destroy"
+                                                ]
+                                            },
+                                            "dependencies":
+                                            {
+                                                "type": "",
+                                                "isOrStatement": false,
+                                                "actions":
+                                                []
+                                            }
+                                        },
+                                        "zones":
+                                        {
+                                            "from":
+                                            [
+                                                "anywhere"
+                                            ],
+                                            "to":
+                                            [
+                                                "anywhere"
+                                            ]
+                                        },
+                                        "conditionType": "condition",
+                                        "scoreBias": 0.3
+                                    }
+                                ]
+                            }
+                        ],
+                        "id": "97c5",
+                        "effectType": "static",
+                        "hasSelfReference": false
+                    },
+                    {
+                        "raw": "Whenever you draw a card, you gain 2 life.",
+                        "parts":
+                        [
+                            {
+                                "raw": "whenever you draw a card, you gain 2 life.",
+                                "parsed": "Whenever you draw a card, you gain 2 life.",
+                                "id": "0dfa",
+                                "conditions":
+                                [
+                                    {
+                                        "text": "whenever you draw a card",
+                                        "canTriggerMultipleTimesPerTurn": true,
+                                        "isCompoundTrigger": false,
+                                        "duringOtherPlayersStep": null,
+                                        "isOptionalPlayerChoice": false,
+                                        "actionScope": "self",
+                                        "gameStateModifier": null,
+                                        "card":
+                                        {
+                                            "this":
+                                            {
+                                                "isOrStatement": false,
+                                                "actions":
+                                                []
+                                            },
+                                            "dependencies":
+                                            {
+                                                "isOrStatement": false,
+                                                "actions":
+                                                []
+                                            }
+                                        },
+                                        "manaProduced":
+                                        {
+                                            "colors":
+                                            [],
+                                            "quantity": 0
+                                        },
+                                        "extra":
+                                        {
+                                            "line":
+                                            {},
+                                            "part":
+                                            {},
+                                            "this":
+                                            {}
+                                        },
+                                        "id": "1c7e",
+                                        "rawText": "whenever you draw a card",
+                                        "qualifiers":
+                                        {
+                                            "quantity":
+                                            {
+                                                "list":
+                                                [
+                                                    1
+                                                ]
+                                            }
+                                        },
+                                        "isSelfReference": false,
+                                        "isSelfAndOtherCardsReference": false,
+                                        "isSelfAndOtherPlayerReference": false,
+                                        "isInputCondition": true,
+                                        "isSingleActivationOnly": false,
+                                        "isSingleTriggerOnly": false,
+                                        "isEnterOrLeaveEffect": false,
+                                        "player":
+                                        {
+                                            "this":
+                                            {
+                                                "type": "self",
+                                                "isOrStatement": false,
+                                                "actions":
+                                                []
+                                            },
+                                            "dependencies":
+                                            {
+                                                "type": "self",
+                                                "isOrStatement": false,
+                                                "actions":
+                                                [
+                                                    "draw"
+                                                ]
+                                            }
+                                        },
+                                        "zones":
+                                        {
+                                            "from":
+                                            [
+                                                "library"
+                                            ],
+                                            "to":
+                                            [
+                                                "hand"
+                                            ]
+                                        },
+                                        "results":
+                                        [
+                                            {
+                                                "text": "you gain 2 life.",
+                                                "canTriggerMultipleTimesPerTurn": true,
+                                                "isCompoundTrigger": false,
+                                                "duringOtherPlayersStep": null,
+                                                "isOptionalPlayerChoice": false,
+                                                "actionScope": "self",
+                                                "gameStateModifier": null,
+                                                "card":
+                                                {
+                                                    "this":
+                                                    {
+                                                        "isOrStatement": false,
+                                                        "actions":
+                                                        []
+                                                    },
+                                                    "dependencies":
+                                                    {
+                                                        "isOrStatement": false,
+                                                        "actions":
+                                                        []
+                                                    }
+                                                },
+                                                "manaProduced":
+                                                {
+                                                    "colors":
+                                                    [],
+                                                    "quantity": 0
+                                                },
+                                                "extra":
+                                                {
+                                                    "line":
+                                                    {},
+                                                    "part":
+                                                    {},
+                                                    "this":
+                                                    {
+                                                        "checksGainsOrLosesLifeNonOpponent": true
+                                                    }
+                                                },
+                                                "id": "aa70",
+                                                "rawText": "you gain 2 life.",
+                                                "qualifiers":
+                                                {
+                                                    "quantity":
+                                                    {
+                                                        "list":
+                                                        [
+                                                            2
+                                                        ]
+                                                    }
+                                                },
+                                                "isSelfReference": false,
+                                                "isSelfAndOtherCardsReference": false,
+                                                "isSelfAndOtherPlayerReference": false,
+                                                "isInputCondition": false,
+                                                "isSingleActivationOnly": false,
+                                                "isSingleTriggerOnly": false,
+                                                "isEnterOrLeaveEffect": false,
+                                                "player":
+                                                {
+                                                    "this":
+                                                    {
+                                                        "type": "self",
+                                                        "isOrStatement": false,
+                                                        "actions":
+                                                        [
+                                                            "gain_life"
+                                                        ]
+                                                    },
+                                                    "dependencies":
+                                                    {
+                                                        "type": "",
+                                                        "isOrStatement": false,
+                                                        "actions":
+                                                        []
+                                                    }
+                                                },
+                                                "zones":
+                                                {
+                                                    "from":
+                                                    [
+                                                        "anywhere"
+                                                    ],
+                                                    "to":
+                                                    [
+                                                        "anywhere"
+                                                    ]
+                                                },
+                                                "conditionType": "result",
+                                                "scoreBias": 0.27
+                                            }
+                                        ],
+                                        "conditionType": "condition",
+                                        "scoreBias": 0.3
+                                    }
+                                ]
+                            }
+                        ],
+                        "id": "8d2a",
+                        "effectType": "trigger",
+                        "hasSelfReference": false
+                    },
+                    {
+                        "raw": "Whenever an opponent draws a card, they lose 2 life.",
+                        "parts":
+                        [
+                            {
+                                "raw": "whenever an opponent draws a card, they lose 2 life.",
+                                "parsed": "Whenever an opponent draws a card, they lose 2 life.",
+                                "id": "a56f",
+                                "conditions":
+                                [
+                                    {
+                                        "text": "whenever an opponent draws a card",
+                                        "canTriggerMultipleTimesPerTurn": true,
+                                        "isCompoundTrigger": false,
+                                        "duringOtherPlayersStep": null,
+                                        "isOptionalPlayerChoice": false,
+                                        "actionScope": "other",
+                                        "gameStateModifier": null,
+                                        "card":
+                                        {
+                                            "this":
+                                            {
+                                                "isOrStatement": false,
+                                                "actions":
+                                                []
+                                            },
+                                            "dependencies":
+                                            {
+                                                "isOrStatement": false,
+                                                "actions":
+                                                []
+                                            }
+                                        },
+                                        "manaProduced":
+                                        {
+                                            "colors":
+                                            [],
+                                            "quantity": 0
+                                        },
+                                        "extra":
+                                        {
+                                            "line":
+                                            {},
+                                            "part":
+                                            {},
+                                            "this":
+                                            {}
+                                        },
+                                        "id": "5aa2",
+                                        "rawText": "whenever an opponent draws a card",
+                                        "qualifiers":
+                                        {
+                                            "quantity":
+                                            {
+                                                "list":
+                                                [
+                                                    1
+                                                ]
+                                            }
+                                        },
+                                        "isSelfReference": false,
+                                        "isSelfAndOtherCardsReference": false,
+                                        "isSelfAndOtherPlayerReference": false,
+                                        "isInputCondition": true,
+                                        "isSingleActivationOnly": false,
+                                        "isSingleTriggerOnly": false,
+                                        "isEnterOrLeaveEffect": false,
+                                        "player":
+                                        {
+                                            "this":
+                                            {
+                                                "type": "opponent",
+                                                "isOrStatement": false,
+                                                "actions":
+                                                []
+                                            },
+                                            "dependencies":
+                                            {
+                                                "type": "opponent",
+                                                "isOrStatement": false,
+                                                "actions":
+                                                [
+                                                    "draw"
+                                                ]
+                                            }
+                                        },
+                                        "zones":
+                                        {
+                                            "from":
+                                            [
+                                                "library"
+                                            ],
+                                            "to":
+                                            [
+                                                "hand"
+                                            ]
+                                        },
+                                        "results":
+                                        [
+                                            {
+                                                "text": "they lose 2 life.",
+                                                "canTriggerMultipleTimesPerTurn": true,
+                                                "isCompoundTrigger": false,
+                                                "duringOtherPlayersStep": null,
+                                                "isOptionalPlayerChoice": false,
+                                                "actionScope": "self",
+                                                "gameStateModifier": null,
+                                                "card":
+                                                {
+                                                    "this":
+                                                    {
+                                                        "isOrStatement": false,
+                                                        "actions":
+                                                        []
+                                                    },
+                                                    "dependencies":
+                                                    {
+                                                        "isOrStatement": false,
+                                                        "actions":
+                                                        []
+                                                    }
+                                                },
+                                                "manaProduced":
+                                                {
+                                                    "colors":
+                                                    [],
+                                                    "quantity": 0
+                                                },
+                                                "extra":
+                                                {
+                                                    "line":
+                                                    {},
+                                                    "part":
+                                                    {},
+                                                    "this":
+                                                    {}
+                                                },
+                                                "id": "27f6",
+                                                "rawText": "they lose 2 life.",
+                                                "qualifiers":
+                                                {
+                                                    "quantity":
+                                                    {
+                                                        "list":
+                                                        [
+                                                            2
+                                                        ]
+                                                    }
+                                                },
+                                                "isSelfReference": false,
+                                                "isSelfAndOtherCardsReference": false,
+                                                "isSelfAndOtherPlayerReference": false,
+                                                "isInputCondition": false,
+                                                "isSingleActivationOnly": false,
+                                                "isSingleTriggerOnly": false,
+                                                "isEnterOrLeaveEffect": false,
+                                                "player":
+                                                {
+                                                    "this":
+                                                    {
+                                                        "type": "opponent",
+                                                        "isOrStatement": false,
+                                                        "actions":
+                                                        [
+                                                            "lose_life"
+                                                        ]
+                                                    },
+                                                    "dependencies":
+                                                    {
+                                                        "type": "",
+                                                        "isOrStatement": false,
+                                                        "actions":
+                                                        []
+                                                    }
+                                                },
+                                                "zones":
+                                                {
+                                                    "from":
+                                                    [
+                                                        "anywhere"
+                                                    ],
+                                                    "to":
+                                                    [
+                                                        "anywhere"
+                                                    ]
+                                                },
+                                                "conditionType": "result",
+                                                "scoreBias": 0.3
+                                            }
+                                        ],
+                                        "conditionType": "condition",
+                                        "scoreBias": 0.3
+                                    }
+                                ]
+                            }
+                        ],
+                        "id": "46d7",
+                        "effectType": "trigger",
+                        "hasSelfReference": false
+                    },
+                    {
+                        "raw": "{2}{B}{B}",
+                        "parts":
+                        [
+                            {
+                                "raw": "{2}{b}{b}",
+                                "parsed": "{2}{B}{B}",
+                                "id": "4990",
+                                "conditions":
+                                [
+                                    {
+                                        "text": "{2}{b}{b}",
+                                        "canTriggerMultipleTimesPerTurn": true,
+                                        "isCompoundTrigger": false,
+                                        "duringOtherPlayersStep": null,
+                                        "isOptionalPlayerChoice": false,
+                                        "actionScope": "self",
+                                        "gameStateModifier": null,
+                                        "card":
+                                        {
+                                            "this":
+                                            {
+                                                "isOrStatement": false,
+                                                "actions":
+                                                []
+                                            },
+                                            "dependencies":
+                                            {
+                                                "isOrStatement": false,
+                                                "actions":
+                                                []
+                                            }
+                                        },
+                                        "manaProduced":
+                                        {
+                                            "colors":
+                                            [],
+                                            "quantity": 0
+                                        },
+                                        "extra":
+                                        {
+                                            "line":
+                                            {},
+                                            "part":
+                                            {},
+                                            "this":
+                                            {}
+                                        },
+                                        "id": "a25d",
+                                        "rawText": "{2}{b}{b}",
+                                        "qualifiers":
+                                        {},
+                                        "isSelfReference": false,
+                                        "isSelfAndOtherCardsReference": false,
+                                        "isSelfAndOtherPlayerReference": false,
+                                        "isInputCondition": false,
+                                        "isSingleActivationOnly": false,
+                                        "isSingleTriggerOnly": false,
+                                        "isEnterOrLeaveEffect": false,
+                                        "player":
+                                        {
+                                            "this":
+                                            {
+                                                "type": "all",
+                                                "isOrStatement": false,
+                                                "actions":
+                                                []
+                                            },
+                                            "dependencies":
+                                            {
+                                                "type": "",
+                                                "isOrStatement": false,
+                                                "actions":
+                                                []
+                                            }
+                                        },
+                                        "zones":
+                                        {
+                                            "from":
+                                            [
+                                                "anywhere"
+                                            ],
+                                            "to":
+                                            [
+                                                "anywhere"
+                                            ]
+                                        },
+                                        "conditionType": "condition",
+                                        "scoreBias": 0.3
+                                    }
+                                ]
+                            }
+                        ],
+                        "id": "80fc",
+                        "effectType": "castingCost",
+                        "hasSelfReference": false
+                    }
+                ]
+            },
+            "categories":
+            {
+                "total": 1,
+                "stats":
+                {
+                    "groupslug": true
+                },
+                "categories":
+                {}
+            },
+            "scoring":
+            {
+                "groupslug":
+                [
+                    {
+                        "special":
+                        {
+                            "isCoinFlip": false,
+                            "preCoinFlipAdjustmentMaxScore": 10,
+                            "preCoinFlipAdjustmentScore": 6.56
+                        },
+                        "bias":
+                        {
+                            "castabilityBiasGenericCostDeduction": 0.109861228866811,
+                            "categoryBias": 1.8144,
+                            "castabilityBias": 0.301194211912202,
+                            "preConditionBias": 1,
+                            "activationBias": 1,
+                            "upkeepBias": 1,
+                            "overallBias": 0.3,
+                            "scorePreBiasAdjustment": 10
+                        },
+                        "hasGenericKindredDependencies": false,
+                        "conditionText": "they lose 2 life.",
+                        "castability":
+                        {
+                            "cmc": 4,
+                            "snow": 0,
+                            "x": 0,
+                            "totalForNonX": 4,
+                            "symbols":
+                            {
+                                "b":
+                                {
+                                    "count": 2
+                                }
+                            },
+                            "coloredPipCount": 2,
+                            "generic": 2,
+                            "phyrexian": 0,
+                            "hybrid": 0,
+                            "hasFreeCast": false,
+                            "hasFreeCastWithCaveat": false,
+                            "hasReductionEffect": false,
+                            "hasSpeedBonus": false,
+                            "costReductionContextIds": null,
+                            "hasRepeatableActivation": false,
+                            "additionalCosts":
+                            {
+                                "loyaltyCost": null,
+                                "isSuspend": false,
+                                "suspendCost":
+                                {},
+                                "suspendLength": 0,
+                                "sacrificeSelf": false,
+                                "payLife": false,
+                                "discardCard": false,
+                                "exileCard": false,
+                                "sacrificePermanent": false,
+                                "tapSelf": false,
+                                "qualifiers": 0,
+                                "isDiceRoll": false,
+                                "discardSelf": false,
+                                "exileSelf": false,
+                                "freeWithCaveat":
+                                {
+                                    "qualifiers": 0
+                                }
+                            },
+                            "score": 0,
+                            "baselineScore": 0
+                        },
+                        "activationCostScoring":
+                        {
+                            "cmc": 0,
+                            "snow": 0,
+                            "x": 0,
+                            "totalForNonX": 0,
+                            "symbols":
+                            {},
+                            "coloredPipCount": 0,
+                            "generic": 0,
+                            "phyrexian": 0,
+                            "hybrid": 0,
+                            "hasFreeCast": false,
+                            "hasFreeCastWithCaveat": false,
+                            "hasReductionEffect": false,
+                            "hasSpeedBonus": false,
+                            "costReductionContextIds": null,
+                            "hasRepeatableActivation": false,
+                            "additionalCosts":
+                            {
+                                "loyaltyCost": null,
+                                "isSuspend": false,
+                                "suspendCost":
+                                {},
+                                "suspendLength": 0,
+                                "sacrificeSelf": false,
+                                "payLife": false,
+                                "discardCard": false,
+                                "exileCard": false,
+                                "sacrificePermanent": false,
+                                "tapSelf": false,
+                                "qualifiers": 0,
+                                "isDiceRoll": false,
+                                "discardSelf": false,
+                                "exileSelf": false,
+                                "freeWithCaveat":
+                                {
+                                    "qualifiers": 0
+                                }
+                            },
+                            "score": 0,
+                            "baselineScore": 0
+                        },
+                        "postProcessorScore": 10,
+                        "isSingleTriggerOnly": false,
+                        "contextIds":
+                        {
+                            "line": "46d7",
+                            "part": "a56f",
+                            "preCondition": "5aa2",
+                            "category": "groupslug",
+                            "condition": "27f6"
+                        },
+                        "effectType": "trigger",
+                        "score": 6.56,
+                        "maxScore": 10,
+                        "scoreRating": 6.56,
+                        "hasAnySynergyDependencies": false,
+                        "hasComplexSynergyDependencies": false,
+                        "hasNoneBaseDependency": false,
+                        "allowSynergyAdjustment": true
+                    }
+                ]
+            },
+            "edhRecSalt": 2.03316326530612,
+            "saltCategories":
+            {
+                "edhrec":
+                {
+                    "score": 2.03316326530612
+                },
+                "groupSlug":
+                {
+                    "score": 5
+                },
+                "total": 7.03316326530612
+            }
+        }
+    },
+    "status":
+    {
+        "exists": true,
+        "CARD_METADATA": true,
+        "CARD_CONTEXT_RULES": true,
+        "CARD_CATEGORY_RULES": true,
+        "SALT_CATEGORY_RULES": true,
+        "invalid": false
+    },
+    "versioning":
+    {
+        "category": "versioning",
+        "containerCategory": "cards",
+        "CARD_CONTEXT_RULES": "12.840",
+        "CARD_CATEGORY_RULES": "21.765",
+        "CARD_METADATA": "5.188",
+        "versioning":
+        {
+            "CACHE_ENGINE_VERSION": 4.036
+        },
+        "SALT_CATEGORY_RULES": "1.429",
+        "id": "versioning_sheoldred_the_apocalypse_cards"
+    }
+}

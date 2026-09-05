@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "DeckDoctor.Cli": {
+      "commandName": "Project",
+      "commandLineArgs": "https://archidekt.com/decks/7093281/the_council_of_four --collection ../../data/collection.csv --out ../../report.json"
+    }
+  }
+}
