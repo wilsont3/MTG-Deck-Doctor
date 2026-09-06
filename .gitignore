@@ -3,3 +3,4 @@ report.json
 bin/
 obj/
 data/collection-cache.json
+.vs/
