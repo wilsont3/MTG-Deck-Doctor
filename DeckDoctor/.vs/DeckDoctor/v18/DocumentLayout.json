@@ -1,25 +1,25 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\wilso\\source\\repos\\DeckDoctor\\",
+  "WorkspaceRootPath": "C:\\Users\\wilso\\source\\repos\\MTG-Deck-Doctor\\DeckDoctor\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F1569E77-6CA2-4CA8-92F8-D8C389BD8249}|src\\DeckDoctor.Cli\\DeckDoctor.Cli.csproj|c:\\users\\wilso\\source\\repos\\deckdoctor\\src\\deckdoctor.cli\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F1569E77-6CA2-4CA8-92F8-D8C389BD8249}|src\\DeckDoctor.Cli\\DeckDoctor.Cli.csproj|c:\\users\\wilso\\source\\repos\\mtg-deck-doctor\\deckdoctor\\src\\deckdoctor.cli\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F1569E77-6CA2-4CA8-92F8-D8C389BD8249}|src\\DeckDoctor.Cli\\DeckDoctor.Cli.csproj|solutionrelative:src\\deckdoctor.cli\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{25B7291A-01A5-4FA2-876E-F8C24864573C}|src\\DeckDoctor.Core\\DeckDoctor.Core.csproj|c:\\users\\wilso\\source\\repos\\deckdoctor\\src\\deckdoctor.core\\services\\archidektclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{25B7291A-01A5-4FA2-876E-F8C24864573C}|src\\DeckDoctor.Core\\DeckDoctor.Core.csproj|c:\\users\\wilso\\source\\repos\\mtg-deck-doctor\\deckdoctor\\src\\deckdoctor.core\\services\\archidektclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{25B7291A-01A5-4FA2-876E-F8C24864573C}|src\\DeckDoctor.Core\\DeckDoctor.Core.csproj|solutionrelative:src\\deckdoctor.core\\services\\archidektclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{25B7291A-01A5-4FA2-876E-F8C24864573C}|src\\DeckDoctor.Core\\DeckDoctor.Core.csproj|c:\\users\\wilso\\source\\repos\\deckdoctor\\src\\deckdoctor.core\\services\\scryfallclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{25B7291A-01A5-4FA2-876E-F8C24864573C}|src\\DeckDoctor.Core\\DeckDoctor.Core.csproj|c:\\users\\wilso\\source\\repos\\mtg-deck-doctor\\deckdoctor\\src\\deckdoctor.core\\services\\scryfallclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{25B7291A-01A5-4FA2-876E-F8C24864573C}|src\\DeckDoctor.Core\\DeckDoctor.Core.csproj|solutionrelative:src\\deckdoctor.core\\services\\scryfallclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{25B7291A-01A5-4FA2-876E-F8C24864573C}|src\\DeckDoctor.Core\\DeckDoctor.Core.csproj|c:\\users\\wilso\\source\\repos\\deckdoctor\\src\\deckdoctor.core\\models\\scryfallmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{25B7291A-01A5-4FA2-876E-F8C24864573C}|src\\DeckDoctor.Core\\DeckDoctor.Core.csproj|c:\\users\\wilso\\source\\repos\\mtg-deck-doctor\\deckdoctor\\src\\deckdoctor.core\\models\\scryfallmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{25B7291A-01A5-4FA2-876E-F8C24864573C}|src\\DeckDoctor.Core\\DeckDoctor.Core.csproj|solutionrelative:src\\deckdoctor.core\\models\\scryfallmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F1569E77-6CA2-4CA8-92F8-D8C389BD8249}|src\\DeckDoctor.Cli\\DeckDoctor.Cli.csproj|c:\\users\\wilso\\source\\repos\\deckdoctor\\src\\deckdoctor.cli\\deckdoctor.cli.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "AbsoluteMoniker": "D:0:0:{F1569E77-6CA2-4CA8-92F8-D8C389BD8249}|src\\DeckDoctor.Cli\\DeckDoctor.Cli.csproj|c:\\users\\wilso\\source\\repos\\mtg-deck-doctor\\deckdoctor\\src\\deckdoctor.cli\\deckdoctor.cli.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
       "RelativeMoniker": "D:0:0:{F1569E77-6CA2-4CA8-92F8-D8C389BD8249}|src\\DeckDoctor.Cli\\DeckDoctor.Cli.csproj|solutionrelative:src\\deckdoctor.cli\\deckdoctor.cli.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     }
   ],
@@ -44,9 +44,9 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "ArchidektClient.cs",
-              "DocumentMoniker": "C:\\Users\\wilso\\source\\repos\\DeckDoctor\\src\\DeckDoctor.Core\\Services\\ArchidektClient.cs",
+              "DocumentMoniker": "C:\\Users\\wilso\\source\\repos\\MTG-Deck-Doctor\\DeckDoctor\\src\\DeckDoctor.Core\\Services\\ArchidektClient.cs",
               "RelativeDocumentMoniker": "src\\DeckDoctor.Core\\Services\\ArchidektClient.cs",
-              "ToolTip": "C:\\Users\\wilso\\source\\repos\\DeckDoctor\\src\\DeckDoctor.Core\\Services\\ArchidektClient.cs",
+              "ToolTip": "C:\\Users\\wilso\\source\\repos\\MTG-Deck-Doctor\\DeckDoctor\\src\\DeckDoctor.Core\\Services\\ArchidektClient.cs",
               "RelativeToolTip": "src\\DeckDoctor.Core\\Services\\ArchidektClient.cs",
               "ViewState": "AgIAAAwAAAAAAAAAAAAowCAAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -56,9 +56,9 @@
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "ScryfallClient.cs",
-              "DocumentMoniker": "C:\\Users\\wilso\\source\\repos\\DeckDoctor\\src\\DeckDoctor.Core\\Services\\ScryfallClient.cs",
+              "DocumentMoniker": "C:\\Users\\wilso\\source\\repos\\MTG-Deck-Doctor\\DeckDoctor\\src\\DeckDoctor.Core\\Services\\ScryfallClient.cs",
               "RelativeDocumentMoniker": "src\\DeckDoctor.Core\\Services\\ScryfallClient.cs",
-              "ToolTip": "C:\\Users\\wilso\\source\\repos\\DeckDoctor\\src\\DeckDoctor.Core\\Services\\ScryfallClient.cs",
+              "ToolTip": "C:\\Users\\wilso\\source\\repos\\MTG-Deck-Doctor\\DeckDoctor\\src\\DeckDoctor.Core\\Services\\ScryfallClient.cs",
               "RelativeToolTip": "src\\DeckDoctor.Core\\Services\\ScryfallClient.cs",
               "ViewState": "AgIAABEAAAAAAAAAAAAwwCUAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -68,9 +68,9 @@
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "ScryfallModels.cs",
-              "DocumentMoniker": "C:\\Users\\wilso\\source\\repos\\DeckDoctor\\src\\DeckDoctor.Core\\Models\\ScryfallModels.cs",
+              "DocumentMoniker": "C:\\Users\\wilso\\source\\repos\\MTG-Deck-Doctor\\DeckDoctor\\src\\DeckDoctor.Core\\Models\\ScryfallModels.cs",
               "RelativeDocumentMoniker": "src\\DeckDoctor.Core\\Models\\ScryfallModels.cs",
-              "ToolTip": "C:\\Users\\wilso\\source\\repos\\DeckDoctor\\src\\DeckDoctor.Core\\Models\\ScryfallModels.cs",
+              "ToolTip": "C:\\Users\\wilso\\source\\repos\\MTG-Deck-Doctor\\DeckDoctor\\src\\DeckDoctor.Core\\Models\\ScryfallModels.cs",
               "RelativeToolTip": "src\\DeckDoctor.Core\\Models\\ScryfallModels.cs",
               "ViewState": "AgIAACEAAAAAAAAAAAAgwDYAAABLAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -80,9 +80,9 @@
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "DeckDoctor.Cli",
-              "DocumentMoniker": "C:\\Users\\wilso\\source\\repos\\DeckDoctor\\src\\DeckDoctor.Cli\\DeckDoctor.Cli.csproj",
+              "DocumentMoniker": "C:\\Users\\wilso\\source\\repos\\MTG-Deck-Doctor\\DeckDoctor\\src\\DeckDoctor.Cli\\DeckDoctor.Cli.csproj",
               "RelativeDocumentMoniker": "src\\DeckDoctor.Cli\\DeckDoctor.Cli.csproj",
-              "ToolTip": "C:\\Users\\wilso\\source\\repos\\DeckDoctor\\src\\DeckDoctor.Cli\\DeckDoctor.Cli.csproj",
+              "ToolTip": "C:\\Users\\wilso\\source\\repos\\MTG-Deck-Doctor\\DeckDoctor\\src\\DeckDoctor.Cli\\DeckDoctor.Cli.csproj",
               "RelativeToolTip": "src\\DeckDoctor.Cli\\DeckDoctor.Cli.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
               "WhenOpened": "2026-08-31T02:25:26.332Z"
@@ -91,11 +91,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\wilso\\source\\repos\\DeckDoctor\\src\\DeckDoctor.Cli\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\wilso\\source\\repos\\MTG-Deck-Doctor\\DeckDoctor\\src\\DeckDoctor.Cli\\Program.cs",
               "RelativeDocumentMoniker": "src\\DeckDoctor.Cli\\Program.cs",
-              "ToolTip": "C:\\Users\\wilso\\source\\repos\\DeckDoctor\\src\\DeckDoctor.Cli\\Program.cs",
+              "ToolTip": "C:\\Users\\wilso\\source\\repos\\MTG-Deck-Doctor\\DeckDoctor\\src\\DeckDoctor.Cli\\Program.cs",
               "RelativeToolTip": "src\\DeckDoctor.Cli\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGoAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAH4AAAAAAAAAAAAhwJsAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-08-31T01:18:53.998Z",
               "EditorCaption": ""

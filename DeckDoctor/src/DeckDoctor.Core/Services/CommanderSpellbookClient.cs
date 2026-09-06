@@ -5,12 +5,12 @@ using DeckDoctor.Core.Models;
 namespace DeckDoctor.Core.Services;
 
 /// <summary>
-/// Combo detection via Commander Spellbook's real REST API (confirmed via their schema listing:
-/// find-my-combos, estimate-bracket, variants, cards, etc. — a proper Django REST backend with
-/// an OpenAPI schema, not a reverse-engineered endpoint). UNVERIFIED against a live response
-/// though — see the note on CommanderSpellbookModels.cs. This is the one integration in the
-/// whole project that hasn't been tested against real data at all; treat the first real run as
-/// the actual verification step.
+/// Combo detection via Commander Spellbook's real REST API. Request/response shapes confirmed
+/// against the official generated client (@space-cow-media/spellbook-client v6.3.3 from npm) —
+/// see CommanderSpellbookModels.cs for details. This replaces an earlier version that resolved
+/// card names to Commander Spellbook's internal numeric IDs one HTTP call at a time, which is
+/// what caused 429 Too Many Requests on a 77-card deck — that whole step is gone now, since the
+/// real API takes card names directly.
 /// </summary>
 public class CommanderSpellbookClient
 {
@@ -20,80 +20,66 @@ public class CommanderSpellbookClient
     public CommanderSpellbookClient(HttpClient? http = null)
     {
         _http = http ?? new HttpClient();
+        // Confirmed guidance from the client's own doc comment: name your tool in the User-Agent,
+        // and expect/handle 429s even at reasonable usage (~80 req/min limit).
         _http.DefaultRequestHeaders.UserAgent.ParseAdd("DeckDoctor/1.0 (personal Commander deck analysis tool)");
     }
 
     /// <summary>
-    /// Resolve card names to Commander Spellbook's own numeric card IDs (their find-my-combos
-    /// endpoint takes IDs, not names, per the documented MCP wrapper). Best-effort: queries
-    /// /cards?search=<name> per card since a confirmed bulk-lookup shape isn't known. This means
-    /// one HTTP call per card — fine for a ~100-card deck, worth batching/caching if ever pointed
-    /// at a full collection (see note in Program.cs on why we don't do that here).
+    /// Finds combos for a deck, given card names directly — no ID resolution step. Returns both
+    /// combos already fully in the deck (Included) and combos missing only a small number of
+    /// cards (AlmostIncluded, as defined by Commander Spellbook's own server-side logic) in a
+    /// single request.
     /// </summary>
-    public async Task<Dictionary<string, int>> ResolveCardIdsAsync(IEnumerable<string> names)
+    public async Task<(List<CommanderSpellbookVariant> Included, List<CommanderSpellbookVariant> AlmostIncluded)> FindCombosAsync(
+        IEnumerable<string> mainDeckCardNames,
+        IEnumerable<string> commanderNames)
     {
-        var result = new Dictionary<string, int>(StringComparer.OrdinalIgnoreCase);
-        foreach (var name in names.Distinct(StringComparer.OrdinalIgnoreCase))
+        var request = new DeckRequestDto
         {
-            try
-            {
-                var url = $"{BaseUrl}/cards?search={Uri.EscapeDataString(name)}";
-                var resp = await _http.GetAsync(url);
-                if (!resp.IsSuccessStatusCode) continue;
-                var body = await resp.Content.ReadAsStringAsync();
-                var parsed = JsonSerializer.Deserialize<CsbCardSearchResponseDto>(body, JsonOpts());
-                var match = parsed?.Results.FirstOrDefault(c => string.Equals(c.Name, name, StringComparison.OrdinalIgnoreCase))
-                    ?? parsed?.Results.FirstOrDefault(); // fall back to best guess if exact match not found
-                if (match != null) result[name] = match.Id;
-            }
-            catch
-            {
-                // Best-effort — a card Commander Spellbook doesn't know about (or a request shape
-                // mismatch) shouldn't kill the whole lookup. Missing cards just can't be checked
-                // for combos, which is a reasonable degradation.
-            }
-        }
-        return result;
-    }
-
-    /// <summary>
-    /// Find combos fully satisfied by the given set of card IDs. NOTE: does not attempt to parse
-    /// "almost included"/partial-match data from this response even though the underlying
-    /// endpoint reportedly supports it — the response shape for that is unconfirmed. Instead,
-    /// "combos you're close to" is computed client-side in Program.cs by calling this twice (deck
-    /// alone, then deck+collection) and diffing which combos newly become fully satisfied — this
-    /// only requires trusting the "fully satisfied" shape, not guessing at partial-match fields.
-    /// </summary>
-    public async Task<List<CommanderSpellbookVariant>> FindCombosAsync(IEnumerable<int> cardIds)
-    {
-        var payload = JsonSerializer.Serialize(new { cards = cardIds.ToList() });
-        using var req = new HttpRequestMessage(HttpMethod.Post, $"{BaseUrl}/find-my-combos")
-        {
-            Content = new StringContent(payload, Encoding.UTF8, "application/json"),
+            Main = mainDeckCardNames.Select(n => new CardInDeckRequestDto(n)).ToList(),
+            Commanders = commanderNames.Select(n => new CardInDeckRequestDto(n)).ToList(),
         };
-        var resp = await _http.SendAsync(req);
+        var payload = JsonSerializer.Serialize(request);
+
+        HttpResponseMessage resp;
+        int attempt = 0;
+        while (true)
+        {
+            attempt++;
+            using var req = new HttpRequestMessage(HttpMethod.Post, $"{BaseUrl}/find-my-combos")
+            {
+                Content = new StringContent(payload, Encoding.UTF8, "application/json"),
+            };
+            resp = await _http.SendAsync(req);
+
+            if (resp.StatusCode != System.Net.HttpStatusCode.TooManyRequests || attempt >= 3)
+                break;
+
+            // Confirmed real possibility per their own docs (~80 req/min limit) — back off and
+            // retry once or twice rather than failing immediately on a single 429.
+            var retryAfter = resp.Headers.RetryAfter?.Delta ?? TimeSpan.FromSeconds(5 * attempt);
+            await Task.Delay(retryAfter);
+        }
+
         var body = await resp.Content.ReadAsStringAsync();
         if (!resp.IsSuccessStatusCode)
-            throw new HttpRequestException(
-                $"Commander Spellbook /find-my-combos returned HTTP {(int)resp.StatusCode}: {body[..Math.Min(300, body.Length)]}. " +
-                $"This is the least-verified integration in the project — if this fails, the request shape " +
-                $"(currently POST with a JSON body {{\"cards\": [...]}}) is the first thing to check against " +
-                $"whatever the real API actually expects.");
+            throw new HttpRequestException($"Commander Spellbook /find-my-combos returned HTTP {(int)resp.StatusCode} after {attempt} attempt(s): {body[..Math.Min(300, body.Length)]}");
 
-        var parsed = JsonSerializer.Deserialize<CsbFindCombosResponseDto>(body, JsonOpts()) ?? new CsbFindCombosResponseDto();
-        var variantDtos = parsed.Included ?? parsed.Results ?? new List<CsbVariantDto>();
+        var parsed = JsonSerializer.Deserialize<CsbFindMyCombosResponseDto>(body, JsonOpts());
+        var results = parsed?.Results ?? new CsbFindMyCombosResultsDto();
 
-        return variantDtos.Select(v => new CommanderSpellbookVariant
-        {
-            Id = v.Id,
-            CardNames = (v.Uses ?? v.Cards ?? new List<CsbVariantCardRefDto>())
-                .Select(c => c.Card?.Name).Where(n => n != null).Select(n => n!).ToList(),
-            ColorIdentity = (v.Identity ?? "").Split(',', StringSplitOptions.RemoveEmptyEntries).ToList(),
-            HasBannedCard = v.BannedCard ?? false,
-            HasSpoiledCard = v.PreviewedCard ?? false,
-            Results = (v.Produces ?? new List<CsbProducesDto>()).Select(p => p.Feature?.Name).Where(n => n != null).Select(n => n!).ToList(),
-        }).ToList();
+        return (results.Included.Select(ToModel).ToList(), results.AlmostIncluded.Select(ToModel).ToList());
     }
+
+    private static CommanderSpellbookVariant ToModel(CsbVariantDto v) => new()
+    {
+        Id = v.Id,
+        CardNames = (v.Uses ?? new()).Select(u => u.Card?.Name).Where(n => n != null).Select(n => n!).ToList(),
+        ColorIdentity = v.Identity ?? "",
+        Results = (v.Produces ?? new()).Select(p => p.Feature?.Name).Where(n => n != null).Select(n => n!).ToList(),
+        Description = v.Description,
+    };
 
     private static JsonSerializerOptions JsonOpts() => new() { PropertyNameCaseInsensitive = true };
 }

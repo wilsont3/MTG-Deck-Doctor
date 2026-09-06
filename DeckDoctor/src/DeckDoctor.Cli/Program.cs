@@ -145,52 +145,41 @@ else
 }
 
 Console.WriteLine();
-Console.WriteLine("Checking Commander Spellbook for combos (least-verified integration — see README if this errors)...");
+Console.WriteLine("Checking Commander Spellbook for combos...");
 var combosInDeck = new List<DeckReportCombo>();
 var combosOneStepAway = new List<DeckReportCombo>();
 try
 {
     var csb = new CommanderSpellbookClient();
+    var nonCommanderMainboard = mainboard.Where(c => !deck.CommanderNames.Contains(c.Name)).Select(c => c.Name);
 
-    var deckIds = await csb.ResolveCardIdsAsync(mainboard.Select(c => c.Name));
-    Console.WriteLine($"  Resolved {deckIds.Count}/{mainboard.Select(c => c.Name).Distinct().Count()} deck cards to Commander Spellbook IDs.");
+    var (included, almostIncluded) = await csb.FindCombosAsync(nonCommanderMainboard, deck.CommanderNames);
+    Console.WriteLine($"  {included.Count} combo(s) already fully in the deck.");
+    Console.WriteLine($"  {almostIncluded.Count} combo(s) almost included (missing a small number of cards).");
 
-    var deckVariants = await csb.FindCombosAsync(deckIds.Values);
-    combosInDeck = deckVariants.Select(v => new DeckReportCombo
+    combosInDeck = included.Select(v => new DeckReportCombo
     {
         Permalink = v.Permalink,
         CardNames = v.CardNames,
         Results = v.Results,
     }).ToList();
-    Console.WriteLine($"  {combosInDeck.Count} combo(s) already fully in the deck.");
 
-    // Only check a bounded slice of the on-color collection, not all 1000+ cards — one HTTP call
-    // per card for ID resolution makes the full collection impractical (see ResolveCardIdsAsync).
-    // Bias toward cheap, castable cards since those are the realistic "one card away" candidates.
-    var collectionSample = onColor
-        .Where(c => c.ManaValue is null or <= 5)
-        .OrderBy(c => c.ManaValue ?? 99)
-        .Take(300)
-        .Select(c => c.Name);
-    var collectionIds = await csb.ResolveCardIdsAsync(collectionSample);
-    Console.WriteLine($"  Resolved {collectionIds.Count} on-color collection cards (curve-limited sample) to Commander Spellbook IDs.");
-
-    var combinedIds = deckIds.Values.Concat(collectionIds.Values).Distinct().ToList();
-    var combinedVariants = await csb.FindCombosAsync(combinedIds);
-
-    var deckComboIds = new HashSet<string>(deckVariants.Select(v => v.Id));
+    // "Almost included" is Commander Spellbook's own server-side definition (missing a small
+    // number of cards from the DECK, not specific to what you own). Cross-reference the missing
+    // cards against your on-color collection locally — no extra API calls needed for this part.
     var deckCardNameSet = new HashSet<string>(mainboard.Select(c => c.Name), StringComparer.OrdinalIgnoreCase);
-    combosOneStepAway = combinedVariants
-        .Where(v => !deckComboIds.Contains(v.Id))
+    var ownedNameSet = new HashSet<string>(onColor.Select(c => c.Name), StringComparer.OrdinalIgnoreCase);
+    combosOneStepAway = almostIncluded
         .Select(v => new DeckReportCombo
         {
             Permalink = v.Permalink,
             CardNames = v.CardNames,
             Results = v.Results,
-            MissingCardsYouOwn = v.CardNames.Where(n => !deckCardNameSet.Contains(n)).ToList(),
+            MissingCardsYouOwn = v.CardNames.Where(n => !deckCardNameSet.Contains(n) && ownedNameSet.Contains(n)).ToList(),
         })
+        .Where(c => c.MissingCardsYouOwn.Count > 0) // only surface ones you can actually complete from your own collection
         .ToList();
-    Console.WriteLine($"  {combosOneStepAway.Count} additional combo(s) completable using cards you own but haven't included.");
+    Console.WriteLine($"  {combosOneStepAway.Count} of those are completable using cards you already own.");
 }
 catch (Exception ex)
 {
