@@ -1,0 +1,5 @@
+data/oracle-tags-cache.json
+report.json
+bin/
+obj/
+data/collection-cache.json
