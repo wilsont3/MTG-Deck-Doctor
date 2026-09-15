@@ -1,6 +1,16 @@
 data/oracle-tags-cache.json
+data/collection-cache.json
 report.json
 bin/
 obj/
-data/collection-cache.json
+
+# Personal collection export — contains your card collection, not something to commit
+data/*.csv
+
+# IDE / OS noise
 .vs/
+.idea/
+*.user
+.DS_Store
+Thumbs.db
+

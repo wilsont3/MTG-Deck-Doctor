@@ -5,13 +5,14 @@ using DeckDoctor.Core.Services;
 
 if (args.Length < 1)
 {
-    Console.WriteLine("Usage: DeckDoctor.Cli <archidekt-deck-url-or-id> [--collection path/to/collection.csv] [--out report.json]");
+    Console.WriteLine("Usage: DeckDoctor.Cli <archidekt-deck-url-or-id> [--collection path/to/collection.csv] [--out report.json] [--deckcheck deck-id-or-url]");
     return 1;
 }
 
 var deckArg = args[0];
 var collectionPath = GetOption(args, "--collection") ?? "data/collection.csv";
 var outPath = GetOption(args, "--out") ?? "report.json";
+var deckCheckArg = GetOption(args, "--deckcheck");
 
 var archidekt = new ArchidektClient();
 var scryfall = new ScryfallClient();
@@ -106,6 +107,22 @@ Console.WriteLine("Analyzing deck...");
 var analyzer = new DeckAnalyzer();
 var weaknessReport = analyzer.Analyze(mainboard.Select(c => new CardAnalysisInput(c.OTags, c.OracleText)));
 
+var tagProfile = DeckTagProfile.Build(mainboard.Select(c => (IEnumerable<string>)c.OTags));
+var topTags = tagProfile.TopTags(15);
+Console.WriteLine();
+Console.WriteLine("Dominant tags across the whole deck (for archetype identification, not weakness scoring):");
+foreach (var (tag, count) in topTags)
+    Console.WriteLine($"  {tag}: {count}");
+
+var commanderTags = deck.CommanderNames
+    .Select(name => mainboard.FirstOrDefault(c => c.Name == name))
+    .Where(c => c != null)
+    .ToDictionary(c => c!.Name, c => c!.OTags);
+Console.WriteLine();
+Console.WriteLine("Commander's own tags (not diluted by the rest of the deck — often the real build-around signal):");
+foreach (var (name, tags) in commanderTags)
+    Console.WriteLine($"  {name}: {string.Join(", ", tags)}");
+
 Console.WriteLine();
 Console.WriteLine($"Deck: {deck.Name}");
 Console.WriteLine($"Commander: {string.Join(" / ", deck.CommanderNames)}");
@@ -186,6 +203,73 @@ catch (Exception ex)
     Console.WriteLine($"  Commander Spellbook check failed: {ex.Message}");
 }
 
+Console.WriteLine();
+Console.WriteLine("Checking Recommander for a second, independent synergy signal...");
+var recommanderSuggestions = new List<DeckReportSuggestion>();
+try
+{
+    var recommander = new RecommanderClient();
+    var primaryCommander = deck.CommanderNames.FirstOrDefault();
+    var secondaryCommander = deck.CommanderNames.Count > 1 ? deck.CommanderNames[1] : null;
+    if (primaryCommander == null)
+    {
+        Console.WriteLine("  No commander detected — skipping Recommander (it requires one).");
+    }
+    else
+    {
+        var nonCommanderNames = mainboard.Where(c => !deck.CommanderNames.Contains(c.Name)).Select(c => c.Name);
+        var recs = await recommander.FindRecommendationsAsync(primaryCommander, secondaryCommander, nonCommanderNames);
+        var deckCardNameSet = new HashSet<string>(mainboard.Select(c => c.Name), StringComparer.OrdinalIgnoreCase);
+        var ownedNameSet = new HashSet<string>(onColor.Select(c => c.Name), StringComparer.OrdinalIgnoreCase);
+        recommanderSuggestions = recs
+            .Where(r => !deckCardNameSet.Contains(r.Name)) // only suggest cards not already in the deck
+            .Select(r => new DeckReportSuggestion
+            {
+                CardName = r.Name,
+                Tag = "recommander-synergy",
+                Score = r.Score,
+                Owned = ownedNameSet.Contains(r.Name),
+            })
+            .ToList();
+        Console.WriteLine($"  {recommanderSuggestions.Count} recommendation(s) not already in the deck ({recommanderSuggestions.Count(s => s.Owned)} of which you own).");
+    }
+}
+catch (Exception ex)
+{
+    Console.WriteLine($"  Recommander check failed: {ex.Message}");
+}
+
+DeckCheckSummary? deckCheckAnalysis = null;
+if (deckCheckArg != null)
+{
+    Console.WriteLine();
+    Console.WriteLine($"Fetching DeckCheck analysis ({deckCheckArg})...");
+    try
+    {
+        var deckCheck = new DeckCheckClient();
+        deckCheckAnalysis = await deckCheck.GetDeckAsync(deckCheckArg);
+        if (deckCheckAnalysis.Crispi != null)
+        {
+            Console.WriteLine($"  Bracket: {deckCheckAnalysis.Bracket}");
+            Console.WriteLine($"  CRISPI — Overall: {deckCheckAnalysis.Crispi.Overall}, Consistency: {deckCheckAnalysis.Crispi.Consistency}, " +
+                $"Resilience: {deckCheckAnalysis.Crispi.Resilience}, Interaction: {deckCheckAnalysis.Crispi.Interaction}, Speed: {deckCheckAnalysis.Crispi.Speed}");
+        }
+        else
+        {
+            Console.WriteLine("  No CRISPI data returned (format may not be Commander, or analysis hasn't completed on DeckCheck yet).");
+        }
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"  DeckCheck check failed: {ex.Message}");
+    }
+}
+else
+{
+    Console.WriteLine();
+    Console.WriteLine("No --deckcheck argument provided — skipping DeckCheck (requires a deck already built on DeckCheck's own platform, not just Archidekt).");
+}
+
 var suggestionEngine = new SuggestionEngine();
 var allSuggestions = new List<DeckReportSuggestion>();
 Console.WriteLine();
@@ -239,6 +323,10 @@ var report = new DeckReport
     NotFoundOnScryfall = allNotFound.Distinct().ToList(),
     CombosInDeck = combosInDeck,
     CombosOneStepAwayInCollection = combosOneStepAway,
+    DominantTags = topTags.Select(t => new TagCount(t.Tag, t.Count)).ToList(),
+    CommanderTags = commanderTags,
+    DeckCheckAnalysis = deckCheckAnalysis,
+    RecommanderSuggestions = recommanderSuggestions,
 };
 
 var json = JsonSerializer.Serialize(report, new JsonSerializerOptions { WriteIndented = true });

@@ -24,13 +24,44 @@ public class DeckReport
     public List<DeckReportCombo> CombosOneStepAwayInCollection { get; set; } = new();
 
     /// <summary>
+    /// Raw oTag counts across the deck, most common first — NOT an archetype classification.
+    /// Deliberately not turned into a tag-combination-to-archetype lookup table in C#: same
+    /// reason commandersalt.com avoids "Assassin's Trophy is removal"-style hardcoding — a table
+    /// built from one deck's tag sample would be guessing at coverage that can't be validated,
+    /// and it'd go stale as new cards/tags appear. Naming the actual archetype from this histogram
+    /// (and researching real strategy-appropriate finishers for it) is a judgment call for the
+    /// narrative layer (Claude Code), not something to bake into the deterministic pipeline.
+    /// </summary>
+    public List<TagCount> DominantTags { get; set; } = new();
+
+    /// <summary>
+    /// The commander's own oTags, verbatim — not filtered, not aggregated. Confirmed real gap
+    /// (2026-09-06): Council of Four's own tags include "repeatable creature tokens", but that
+    /// never surfaced in DominantTags' aggregate top-15 because it's rare across the other 75
+    /// cards, drowned out by sheer draw-card volume. The commander is the one card always
+    /// present and usually the actual build-around piece — its tags deserve to be seen on their
+    /// own, not diluted into one data point among many.
+    /// </summary>
+    public Dictionary<string, List<string>> CommanderTags { get; set; } = new();
+
+    /// <summary>
     /// Deterministic bracket-relevant facts, computed from fields Archidekt already provides
     /// per card (gameChanger/tutor/extraTurns/massLandDenial — confirmed real fields, 2026-08-31)
     /// plus EDHREC's own "gamechangers" category where available. This is data, not judgment —
     /// the narrative layer (Claude Code) still does the actual bracket reasoning against it.
     /// </summary>
     public DeckBracketSignals BracketSignals { get; set; } = new();
+
+    /// <summary>Populated only if a DeckCheck deck ID/URL was provided via --deckcheck — null
+    /// otherwise. Requires the deck to already exist on DeckCheck's own platform, separately from
+    /// Archidekt (see README on why this is a real workflow catch, not just an API detail).</summary>
+    public DeckCheckSummary? DeckCheckAnalysis { get; set; }
+
+    /// <summary>A second, independent synergy signal alongside EDHREC — from Recommander's public API.</summary>
+    public List<DeckReportSuggestion> RecommanderSuggestions { get; set; } = new();
 }
+
+public record TagCount(string Tag, int Count);
 
 public class DeckBracketSignals
 {

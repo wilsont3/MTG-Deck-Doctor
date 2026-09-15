@@ -19,8 +19,10 @@ Full background and design rationale: `docs/IMPLEMENTATION_PLAN.md`.
 5. Checks **Commander Spellbook** for combos already in the deck, and combos you could complete
    with cards you own but haven't included.
 6. Runs deterministic analysis: tag-based weakness detection (ramp/draw/removal), a text-pattern
-   based win-condition scan, and bracket signals (Game Changers, tutors, extra turns, mass land
-   denial — real per-card flags, not inference).
+   based win-condition scan, a filtered tag histogram (which mechanisms actually dominate this
+   deck — a fingerprint for archetype identification, not a classification itself), and bracket
+   signals (Game Changers, tutors, extra turns, mass land denial — real per-card flags, not
+   inference).
 7. Writes everything to `report.json` — a structured summary meant to be handed to **Claude Code**
    for the actual narrative audit (is this deck's win-con package fast enough? redundant enough?
    what's the honest bracket read?). The C# side does the mechanical analysis; the judgment call
@@ -42,8 +44,11 @@ the last three, they're not on by default).
 ## Usage
 
 ```
-dotnet run --project src/DeckDoctor.Cli -- <archidekt-deck-url> [--collection path/to/collection.csv] [--out report.json]
+dotnet run --project src/DeckDoctor.Cli -- <archidekt-deck-url> [--collection path/to/collection.csv] [--out report.json] [--deckcheck deck-id-or-url]
 ```
+
+`--deckcheck` is optional and requires the SAME deck to already exist separately on DeckCheck's
+own platform (not just Archidekt) — see "Notable data-source quirks" below for why.
 
 Example:
 
@@ -54,9 +59,10 @@ dotnet run --project src/DeckDoctor.Cli -- https://archidekt.com/decks/7093281/t
 In Visual Studio: open `DeckDoctor.sln`, set `DeckDoctor.Cli` as the startup project, and edit
 arguments via the project's Debug Properties (pre-filled in `Properties/launchSettings.json`).
 
-Once `report.json` is written, open Claude Code in this repo and point it at the file for the
-actual audit — that's a deliberate manual step, not automated (see "Why Claude Code is a manual
-step" below).
+Once `report.json` is written, attach it to a claude.ai chat (or a Project) and ask for the audit
+— the `mtg-commander-wincon-audit` skill should recognize the file's shape and know how to use
+each field. Claude Code would work the same way and keeps this fully within a subscription's
+usage, but requires a paid plan — attaching the file in a normal chat works on the Free plan too.
 
 ## Project structure
 
@@ -66,7 +72,7 @@ DeckDoctor/
     DeckDoctor.Core/
       Models/       — DTOs for each external API, plus the internal domain models
       Services/     — one client per external source (Archidekt, Scryfall, EDHREC, Commander
-                       Spellbook), plus collection loading and caching
+                       Spellbook, Recommander, DeckCheck), plus collection loading and caching
       Analysis/      — the deterministic analysis: tag profiling, weakness thresholds, win-
                        condition text patterns, upgrade suggestion scoring
     DeckDoctor.Cli/
@@ -103,6 +109,24 @@ negatives more than false positives, and know that it can't distinguish a genuin
 from a marginal incremental effect that happens to share the same mechanism. That distinction is
 exactly what the Claude Code narrative pass is for.
 
+**The tag histogram (`DominantTags`) identifies signal, not archetype.** It's the deck's most
+common oTags, filtered against a small noise list (`activated ability`/`triggered ability` are
+true of almost every deck and were the top two entries before filtering; a couple of tags that
+describe a card's *name* rather than function got excluded too). Naming the actual archetype from
+this histogram, and finding real strategy-appropriate finishers for it, is left to whoever reads
+`report.json` — a hardcoded tag-combination-to-archetype table would be guessing at coverage built
+from a small number of real decks, and "what are good finishers for archetype X" doesn't have
+clean structured data behind it anyway (see the Commander Spellbook section below) — that's
+exactly the kind of question web search answers and a static C# table can't.
+
+**The commander's own tags (`CommanderTags`) are surfaced separately, not just folded into the
+aggregate.** Real gap confirmed on Council of Four: its own oTags include `"repeatable creature
+tokens"`, but that never made the aggregate top-15 — it's rare across the other 75 cards, drowned
+out by sheer draw-card volume. The commander is the one card always present and usually the actual
+build-around piece; averaging its signal into 76 data points buries exactly the thing most likely
+to matter. With both pieces available, the real picture (draw engine AND token maker, not just
+draw engine) becomes visible instead of one strategy quietly outweighing the other by card count.
+
 **Why Claude Code is a manual step, not automated.** Claude Code used interactively (a human
 triggering it, reading `report.json` themselves) draws on the same usage as a normal Claude.ai
 subscription — free in that sense. Programmatic/headless invocation from inside `Program.cs`
@@ -134,6 +158,20 @@ the relevant client:
   its real, versioned type definitions directly, rather than guessing from documentation prose.
   The response also already separates fully-included and "almost included" combos in one call —
   no need to make two requests and diff them client-side.
+- **DeckCheck's `/deck` endpoint takes a DeckCheck-native deck ID or URL, not an Archidekt one.**
+  There's no import-from-Archidekt shortcut in their read API — the same deck has to be separately
+  built or imported on DeckCheck's own platform to get CRISPI/bracket data for it. This is real
+  ongoing duplication (keeping two platforms in sync as you edit a deck), not a one-time setup
+  cost like the collection CSV — a deliberate trade-off, not an oversight, made because the CRISPI
+  breakdown (Consistency, Resilience, Interaction, Speed, Overall) is genuinely richer bracket/
+  power data than anything computed locally, especially the Speed dimension which maps closely
+  onto the fast-vs-slow distinction `WinConditionPatterns` can't fully capture on its own.
+- **Recommander and Commander Spellbook were both fully documented and reachable on the first
+  try** — a nice change from EDHREC (reverse-engineered, `robots.txt`-blocked for direct fetch)
+  and the original Commander Spellbook attempt (needed the official npm client's source to get
+  right). Both `RecommanderModels.cs` and `DeckCheckModels.cs` were verified against real example
+  JSON pulled directly from their own docs, not guessed — genuine confidence, not the usual
+  "verify on your first live run" caveat that applies to EDHREC and Commander Spellbook.
 
 ## Known limitations / not implemented
 
